@@ -1,7 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
+gem 'sqlite3-ruby', :require => 'sqlite3', :group => :development
+gem "nifty-generators", :group => :development
+gem "simple_form"
 
+group :development, :test do
+  gem 'heroku'
+end
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
