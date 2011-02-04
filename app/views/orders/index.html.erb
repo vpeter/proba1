@@ -1,4 +1,4 @@
-<% title "Orders" %>
+<% title t("order.title_orders").capitalize %>
 
 <table>
   <tr>
@@ -9,11 +9,11 @@
     <tr>
       <td><%= order.name %></td>
       <td><%= order.price %></td>
-      <td><%= link_to "Show", order %></td>
-      <td><%= link_to "Edit", edit_order_path(order) %></td>
-      <td><%= link_to "Destroy", order, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to t("order.show").capitalize, order %></td>
+      <td><%= link_to t("order.edit").capitalize, edit_order_path(order) %></td>
+      <td><%= link_to t("order.destroy").capitalize, order, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Order", new_order_path(order) %></p>
+<p><%= link_to t("order.new_order").capitalize, new_order_path(order) %></p>

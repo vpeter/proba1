@@ -1,5 +1,5 @@
-<% title "New Order" %>
+<% title t("order.title_new_order").capitalize %>
 
 <%= render 'form' %>
 
-<p><%= link_to "Back to List", orders_path %></p>
+<p><%= link_to t("order.back_to_list").capitalize, orders_path %></p>

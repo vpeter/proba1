@@ -1,8 +1,8 @@
-<% title "Edit Order" %>
+<% title t("order.title_edit").capitalize %>
 
 <%= render 'form' %>
 
 <p>
-  <%= link_to "Show", @order %> |
-  <%= link_to "View All", orders_path %>
+  <%= link_to t("order.show").capitalize, @order %> |
+  <%= link_to t("order.view_all").capitalize, orders_path %>
 </p>
