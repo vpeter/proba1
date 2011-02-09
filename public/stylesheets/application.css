@@ -1,3 +1,7 @@
+
+/*html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}*/
+
+
 body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
@@ -19,12 +23,45 @@ a {
 }
 
 #container {
-  width: 75%;
+  position: relative;
+  width: 960px;
   margin: 0 auto;
   background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
+/*  padding: 20px 20px;*/
+/*  border: solid 1px red;*/
+}
+
+#head2 {
+  width: 100%;
+  position: absolute; top: 0px; left: 0px;
+  height: 160px;
+  background-image: url("/images/head.jpg");  background-repeat: repeat-x;
+}
+
+#heading {
+  width: 850px;
+  height: 60px;
+  position: absolute; top: 40px; left: 60px;
+  color: #114411;
+  vertical-align: middle;
+  font-size: 3.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 4px #110000;
+}
+
+#nav {
+  position: absolute; bottom: 10px; left: 60px;
+  width: 840px;
+  height: 20px;
+/*  background-color: #114411;*/
+}
+
+#content {
+  width: 840px;
+  position: absolute; top: 165px;
+  background-color: #bD6;
+  padding: 60px;
 }
 
 #flash_notice, #flash_error, #flash_alert {

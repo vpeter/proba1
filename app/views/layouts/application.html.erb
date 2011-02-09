@@ -9,11 +9,23 @@
   </head>
   <body>
     <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
+      <div id="head2">
+        <div id="heading">
+          névjegykártya online
+        </div>
+          <div id="nav">
+            <%#*<div id="nav_inside">%>
+            Menü Menü Menü Menü Menü Menü Menü Menü Menü
+            <%#*</div>%>
+          </div>
+      </div>
+      <div id="content">
+          <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <% end %>
+          <%= content_tag :h1, yield(:title) if show_title? %>
+          <%= yield %>
+      </div>
     </div>
   </body>
 </html>
