@@ -54,18 +54,19 @@ a {
 
 #nav div {
     float: left;
-    padding: 3px 30px 3px 30px;
-    margin: 0px 10px 0px 0px;
-/*    border: 1px solid #000000;*/
+    padding: 3px 20px 4px 20px;
+    margin: 0px 5px 0px 0px;
     background-color: #cc0000;
 }
 
 #nav a {
     color: whitesmoke;
     font-weight: 900;
+    font-size: 12px;
+    text-decoration: none;
 }
 
-#nav {;
+#nav {
   position: absolute; bottom: 10px; left: 60px;
   width: 840px;
   height: 20px;
