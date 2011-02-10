@@ -23,17 +23,19 @@ a {
 }
 
 #container {
-  position: relative;
+/*  position: relative;*/
   width: 960px;
+  min-height: 700px;
   margin: 0 auto;
   background-color: #FFF;
 /*  padding: 20px 20px;*/
-/*  border: solid 1px red;*/
+  border: solid 1px red;
 }
 
 #head2 {
+  position: relative;
   width: 100%;
-  position: absolute; top: 0px; left: 0px;
+/*  position: absolute; top: 0px; left: 0px;*/
   height: 160px;
   background-image: url("/images/head.jpg");  background-repeat: repeat-x;
 }
@@ -50,16 +52,29 @@ a {
   text-shadow: 3px 3px 4px #110000;
 }
 
-#nav {
+#nav div {
+    float: left;
+    padding: 3px 30px 3px 30px;
+    margin: 0px 10px 0px 0px;
+/*    border: 1px solid #000000;*/
+    background-color: #cc0000;
+}
+
+#nav a {
+    color: whitesmoke;
+    font-weight: 900;
+}
+
+#nav {;
   position: absolute; bottom: 10px; left: 60px;
   width: 840px;
   height: 20px;
-/*  background-color: #114411;*/
+/*  background-color: #cc0000;*/
 }
 
 #content {
   width: 840px;
-  position: absolute; top: 165px;
+/*  position: absolute; top: 165px;*/
   background-color: #bD6;
   padding: 60px;
 }
