@@ -14,31 +14,37 @@
           névjegykártya online
         </div>
         <div id="nav">
-          
-          <div>
-            <a href="#" target="_self">első menü</a>
-          </div>
-          <div>
-            <a href="#" target="_self">második menü</a>
-          </div>
-          <div class="aktivmenu">
-            <a href="#" target="_self">harmadik menü</a>
-          </div>
-          <div>
-            <a href="#" target="_self">negyedik menü</a>
-          </div>
-          <div>
-            <a href="#" target="_self">ötödik menü</a>
-          </div>
-          
-        </div>
+            <ul>
+                <li>
+                    <a class="rounded-corners-kicsi" href="#" target="_self">Kezdőlap</a>
+                </li>
+                <li>
+                  <a class="rounded-corners-kicsi" href="#" target="_self">Áraink - megrendelés</a>
+                </li>
+                <li>
+                    <a class="rounded-corners-kicsi" href="#" target="_self">Megrendelés menete</a>
+                </li>
+                <li>
+                    <a class="rounded-corners-kicsi" href="#" target="_self">Elérhetőség</a>
+                </li>
+                <li id="aktivmenupont">
+                    <a class="rounded-corners-kicsi" href="#" target="_self">Teljesítési feltételek</a>
+                </li>
+                <li>
+                    <a class="rounded-corners-kicsi" href="#" target="_self">GY.I.K.</a>
+                </li>
+            </ul>
+        </div><!-- nav div vége  -->
+
       </div>
       <div id="content">
+        <div id="content_inside" class="rounded-corners">
           <% flash.each do |name, msg| %>
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
           <% end %>
           <%= content_tag :h1, yield(:title) if show_title? %>
           <%= yield %>
+        </div>
       </div>
     </div>
   </body>

@@ -22,64 +22,6 @@ a {
   overflow: hidden;
 }
 
-#container {
-/*  position: relative;*/
-  width: 960px;
-  min-height: 700px;
-  margin: 0 auto;
-  background-color: #FFF;
-/*  padding: 20px 20px;*/
-  border: solid 1px red;
-}
-
-#head2 {
-  position: relative;
-  width: 100%;
-/*  position: absolute; top: 0px; left: 0px;*/
-  height: 160px;
-  background-image: url("/images/head.jpg");  background-repeat: repeat-x;
-}
-
-#heading {
-  width: 850px;
-  height: 60px;
-  position: absolute; top: 40px; left: 60px;
-  color: #114411;
-  vertical-align: middle;
-  font-size: 3.5em;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 4px #110000;
-}
-
-#nav div {
-    float: left;
-    padding: 3px 20px 4px 20px;
-    margin: 0px 5px 0px 0px;
-    background-color: #cc0000;
-}
-
-#nav a {
-    color: whitesmoke;
-    font-weight: 900;
-    font-size: 12px;
-    text-decoration: none;
-}
-
-#nav {
-  position: absolute; bottom: 10px; left: 60px;
-  width: 840px;
-  height: 20px;
-/*  background-color: #cc0000;*/
-}
-
-#content {
-  width: 840px;
-/*  position: absolute; top: 165px;*/
-  background-color: #bD6;
-  padding: 60px;
-}
-
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
@@ -125,4 +67,101 @@ a {
 
 .error_messages ul {
   margin: 0;
+}
+
+/*----------- saját rész ----------------*/
+
+#container {
+  width: 960px;
+  min-height: 700px;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+
+#head2 {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background-image: url("/images/head.jpg");  background-repeat: repeat-x;
+}
+
+#heading {
+  position: absolute; top: 40px; left: 60px;
+  width: 850px;
+  height: 60px;
+  font-size: 3.5em;
+  font-weight: 900;
+  color: #212629;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 4px #821217;
+}
+
+#content {
+  width: 840px;
+  background-color: #212629;
+  padding: 60px;
+}
+
+#content_inside {
+  padding: 60px;
+  background-color: #ffeeba;
+}
+
+.rounded-corners {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.rounded-corners-kicsi {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#nav {
+  position: absolute; bottom: 10px; left: 60px;
+}
+
+#nav ul {
+	border: 0px solid #cc0000;
+	margin: 0px;
+	padding: 0px;
+}
+#nav ul li{
+/* ez szedi le aa lista pontjainak  elejérőla béna kis pöttyeket*/
+	list-style-type: none;
+/* ez rakja egymás mellé a lista elemeit, így lesz egy vízszintes menüd*/
+	float: left;
+}
+
+#nav a {
+/*ez adjaa jobb és bal térközt  a menük szövegeinek két oldalán*/
+	padding-right: 20px;
+	padding-left: 20px;
+/*ez adja a kis elválasztó vonalat, átlátszik alatta a háttér*/
+	margin-left: 5px;
+/*ettől válik érzékennyé az egész box a kurzorra*/
+	display: block;
+	line-height: 26px;
+	font-size: 12px;
+	text-decoration: none;
+	color: #ffffff;
+	background: #212629;
+	border: 0px dotted #00cc00;
+}
+
+#nav a:hover {
+	background: #67181c;
+}
+
+#nav #aktivmenupont a {
+	background: #821217;
+}
+
+#nav #aktivmenupont a:hover {
+/*ez  adja  az aktív azonosítójú menü színeit*/
+	background: #441f23;
 }
