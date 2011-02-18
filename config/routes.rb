@@ -1,7 +1,18 @@
 Proba1::Application.routes.draw do
+
+  get "pages/home"
+
+  get "pages/order_description"
+
+  get "pages/contact"
+
+  get "pages/policy"
+
+  get "pages/faq"
+
   resources :orders
 
-  root :to => "orders#index"
+  root :to => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

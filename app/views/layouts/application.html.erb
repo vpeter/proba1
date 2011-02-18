@@ -16,29 +16,31 @@
         <div id="nav">
             <ul>
                 <li>
-                    <a class="rounded-corners-kicsi" href="#" target="_self">Kezdőlap</a>
+                  <%= link_to "kezdőlap", :controller => "pages", :action => "home" %>
                 </li>
                 <li>
-                  <a class="rounded-corners-kicsi" href="#" target="_self">Áraink - megrendelés</a>
+                  <%= link_to "áraink - megrendelés", orders_path %>
                 </li>
                 <li>
-                    <a class="rounded-corners-kicsi" href="#" target="_self">Megrendelés menete</a>
+                  <%= link_to "megrendelés menete", :controller => "pages", :action => "order_description" %>
                 </li>
                 <li>
-                    <a class="rounded-corners-kicsi" href="#" target="_self">Elérhetőség</a>
-                </li>
-                <li id="aktivmenupont">
-                    <a class="rounded-corners-kicsi" href="#" target="_self">Teljesítési feltételek</a>
+                  <%= link_to "elérhetőség", :controller => "pages", :action => "contact" %>
                 </li>
                 <li>
-                    <a class="rounded-corners-kicsi" href="#" target="_self">GY.I.K.</a>
+                  <%= link_to "teljesítési feltételek", :controller => "pages", :action => "policy" %>
+                </li>
+                <li>
+                  <%= link_to "GY.I.K.", :controller => "pages", :action => "faq" %>
                 </li>
             </ul>
         </div><!-- nav div vége  -->
 
       </div>
       <div id="content">
+        <h3>Ezek a közös szövegek</h3>
         <div id="content_inside" class="rounded-corners">
+        <%#*<div id="content_inside" class="rounded-corners">%>
           <% flash.each do |name, msg| %>
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
           <% end %>

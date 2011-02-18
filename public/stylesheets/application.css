@@ -102,23 +102,20 @@ a {
   padding: 60px;
 }
 
+#content h3 {
+  color: #ffeeba;
+}
+
 #content_inside {
   padding: 60px;
   background-color: #ffeeba;
 }
 
 .rounded-corners {
-    -moz-border-radius: 10px;
+    -moz-border-radius: 15px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
-}
-
-.rounded-corners-kicsi {
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -khtml-border-radius: 6px;
-    border-radius: 6px;
 }
 
 #nav {
@@ -151,17 +148,28 @@ a {
 	color: #ffffff;
 	background: #212629;
 	border: 0px dotted #00cc00;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -khtml-border-radius: 6px;
+        border-radius: 6px;
+        text-transform: capitalize
 }
 
 #nav a:hover {
 	background: #67181c;
+        text-decoration:underline;
+}
+
+#nav a:active   {
+	background: #821217;
+        background-color:#FF704D;
 }
 
 #nav #aktivmenupont a {
 	background: #821217;
 }
 
-#nav #aktivmenupont a:hover {
-/*ez  adja  az aktív azonosítójú menü színeit*/
+/*#nav #aktivmenupont a:hover {
+ez  adja  az aktív azonosítójú menü színeit
 	background: #441f23;
-}
+}*/
