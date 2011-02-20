@@ -13,29 +13,27 @@
         <div id="heading">
           névjegykártya online
         </div>
-        <div id="nav">
+            <%  @menu_items = [
+              {:link_text => "kezdőlap",                :contr => "pages",  :action => "home"},
+              {:link_text => "áraink - megrendelés",    :contr => "orders", :action => "index"},
+              {:link_text => "megrendelés menete",      :contr => "pages",  :action => "order_description"},
+              {:link_text => "elérhetőség",             :contr => "pages",  :action => "contact"},
+              {:link_text => "teljesítési feltételek",  :contr => "pages",  :action => "policy"},
+              {:link_text => "GY.I.K.",                 :contr => "pages",  :action => "faq"}
+             ] %>
+            <div id="nav">
             <ul>
-                <li>
-                  <%= link_to "kezdőlap", :controller => "pages", :action => "home" %>
-                </li>
-                <li>
-                  <%= link_to "áraink - megrendelés", orders_path %>
-                </li>
-                <li>
-                  <%= link_to "megrendelés menete", :controller => "pages", :action => "order_description" %>
-                </li>
-                <li>
-                  <%= link_to "elérhetőség", :controller => "pages", :action => "contact" %>
-                </li>
-                <li>
-                  <%= link_to "teljesítési feltételek", :controller => "pages", :action => "policy" %>
-                </li>
-                <li>
-                  <%= link_to "GY.I.K.", :controller => "pages", :action => "faq" %>
-                </li>
+                <% @menu_items.each do |x| %>
+                  <% if $aktualis == x[:action] %>
+                      <li class="aktualis">
+                  <% else %>
+                      <li>
+                  <% end %>
+                        <%= link_to x[:link_text], :controller => x[:contr], :action => x[:action] %>
+                      </li>
+                <% end %>
             </ul>
-        </div><!-- nav div vége  -->
-
+            </div><!-- nav div vége  -->
       </div>
       <div id="content">
         <h3>Ezek a közös szövegek</h3>

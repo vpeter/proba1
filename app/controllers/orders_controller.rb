@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   def index
     @orders = Order.all
+    $aktualis = "index"
   end
 
   def show
