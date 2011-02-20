@@ -135,10 +135,8 @@ a {
 }
 
 #nav ul {
-/*	border: 1px solid #cc0000;*/
 	margin: 0px;
 	padding: 3px;
-/*	background: #212629;*/
 }
 
 #nav ul li{
@@ -159,17 +157,14 @@ a {
 	line-height: 26px;
 	font-size: 12px;
 	text-decoration: none;
-	color: darkgray;
+	color: sandybrown;
 	background: #78000a;
 	border: 0px solid #00cc00;
         -moz-border-radius: 0px;
-        border-top-left-radius:5px;
-        border-top-right-radius:5px;
-/*        border-bottom-right-radius:2em;
-        border-bottom-left-radius:2em;
-        -webkit-border-radius: 6px;
-        -khtml-border-radius: 6px;
-        border-radius: 6px;*/
+        border-top-left-radius:13px 26px;
+        border-top-right-radius:13px 26px;
+        -moz-border-radius-topleft: 13px 26px;
+        -moz-border-radius-topright: 13px 26px;
         text-transform: capitalize
 }
 
@@ -180,8 +175,7 @@ a {
 }
 
 #nav a:hover {
-        color: darkgrey;
-	background: #78000a;
+        color: white;
 }
 
 #nav a:active   {
