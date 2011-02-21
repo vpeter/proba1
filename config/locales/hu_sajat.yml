@@ -5,6 +5,16 @@
 #Ez a saját fordításom
 
 "hu":
+  home:
+    title: "ez a nyitólap"
+  order_description:
+    title: "a megrendelés menete"
+  contact:
+    title: "elérhetőségeink"
+  policy:
+    title: "teljesítési feltételeink"
+  faq:
+    title: "GY.I.K."
   order:
     title_orders: "az összes megrendelés"
     title_order: "a megrendelés adatai"

@@ -25,7 +25,7 @@ a img {
 }
 
 a {
-  color: #0000FF;
+  color: #fba;
 }
 
 .clear {
@@ -83,6 +83,45 @@ a {
 
 /*----------- saját rész ----------------*/
 
+.title {
+    color: wheat;
+    font-size: 24px;
+/*    text-transform: capitalize;*/
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.title:first-letter {
+    text-transform: uppercase;
+}
+
+.comment {
+    background-color: #f99;
+    color: red;
+    font-family: monospace;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a.comment {
+    text-decoration: none;
+    opacity:.2;
+}
+
+a.comment:hover{
+    opacity:1;
+}
+.comment:before {
+    content: "note: ";
+    color: black;
+    padding: 2px;
+}
+
 #container {
   width: 960px;
   min-height: 700px;
@@ -109,21 +148,19 @@ a {
 }
 
 #content {
-  width: 840px;
+  width: 900px;
+  min-height: 540px;
   background-color: #212629;
-  padding: 60px;
+  padding: 30px;
 }
 
 #content h3 {
   color: #ffeeba;
 }
 
-#content_inside {
+.content_inside {
   padding: 60px;
   background-color: #ffeeba;
-}
-
-.rounded-corners {
     -moz-border-radius: 15px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
@@ -168,16 +205,28 @@ a {
         text-transform: capitalize
 }
 
+#nav a:hover {
+        color: white;
+}
+
 #nav .aktualis a {
 	line-height: 27px;
 	background: #212629;
         color: white;
 }
 
-#nav a:hover {
-        color: white;
-}
-
 #nav a:active   {
         background: #78000a;
 }
+input[type="text"]
+{
+/*width:150px;*/
+/*display:block;*/
+/*margin-bottom:10px;*/
+background-color:darkkhaki;
+}
+input:focus {
+    background-color:greenyellow;
+}
+
+
