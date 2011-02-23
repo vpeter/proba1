@@ -14,7 +14,7 @@
           névjegykártya online
         </div>
             <%  @menu_items = [
-              {:link_text => "kezdőlap",                :contr => "pages",  :action => "home"},
+              {:link_text => ". . .",                :contr => "pages",  :action => "home"},
               {:link_text => "áraink - megrendelés",    :contr => "orders", :action => "index"},
               {:link_text => "megrendelés menete",      :contr => "pages",  :action => "order_description"},
               {:link_text => "elérhetőség",             :contr => "pages",  :action => "contact"},
@@ -24,8 +24,12 @@
             <div id="nav">
             <ul>
                 <% @menu_items.each do |x| %>
-                  <% if $aktualis == x[:action] %>
-                      <li class="aktualis">
+                  <% if x[:link_text] == ". . ." and !(x[:action] == $aktualis) %>
+                      <li class="menu_home">
+                  <% elsif x[:link_text] == ". . ." and x[:action] == $aktualis %>
+                      <li class="menu_home_actual">
+                  <% elsif x[:action] == $aktualis %>
+                      <li class="menu_actual">
                   <% else %>
                       <li>
                   <% end %>
