@@ -13,40 +13,44 @@
         <div id="heading">
           névjegykártya online
         </div>
-            <%  @menu_items = [
-              {:link_text => ". . .",                :contr => "pages",  :action => "home"},
-              {:link_text => "áraink - megrendelés",    :contr => "orders", :action => "index"},
-              {:link_text => "megrendelés menete",      :contr => "pages",  :action => "order_description"},
-              {:link_text => "elérhetőség",             :contr => "pages",  :action => "contact"},
-              {:link_text => "teljesítési feltételek",  :contr => "pages",  :action => "policy"},
-              {:link_text => "GY.I.K.",                 :contr => "pages",  :action => "faq"}
-             ] %>
-            <div id="nav">
-            <ul>
-                <% @menu_items.each do |x| %>
-                  <% if x[:link_text] == ". . ." and !(x[:action] == $aktualis) %>
-                      <li class="menu_home">
-                  <% elsif x[:link_text] == ". . ." and x[:action] == $aktualis %>
-                      <li class="menu_home_actual">
-                  <% elsif x[:action] == $aktualis %>
-                      <li class="menu_actual">
-                  <% else %>
-                      <li>
-                  <% end %>
-                        <%= link_to x[:link_text], :controller => x[:contr], :action => x[:action] %>
-                      </li>
+        <div id="logo">
+          <%=image_tag "Nevjegykartya_logo_nagy2.png" %>
+        </div>
+        <%  @menu_items = [
+          {:link_text => ". . .",                   :contr => "pages",  :action => "home"},
+          {:link_text => "áraink - megrendelés",    :contr => "orders", :action => "index"},
+          {:link_text => "megrendelés menete",      :contr => "pages",  :action => "order_description"},
+          {:link_text => "elérhetőség",             :contr => "pages",  :action => "contact"},
+          {:link_text => "teljesítési feltételek",  :contr => "pages",  :action => "policy"},
+          {:link_text => "GY.I.K.",                 :contr => "pages",  :action => "faq"}
+         ] %>
+        <div id="nav">
+          <ul>
+              <% @menu_items.each do |x| %>
+                <% if x[:link_text] == ". . ." and !(x[:action] == $aktualis) %>
+                    <li class="menu_home">
+                <% elsif x[:link_text] == ". . ." and x[:action] == $aktualis %>
+                    <li class="menu_home_actual">
+                <% elsif x[:action] == $aktualis %>
+                    <li class="menu_actual">
+                <% else %>
+                    <li>
                 <% end %>
-            </ul>
-            </div><!-- nav div vége  -->
+                      <%= link_to x[:link_text], :controller => x[:contr], :action => x[:action] %>
+                    </li>
+              <% end %>
+          </ul>
+        </div><!-- nav div vége  -->
       </div>
       <div id="content">
         <%#*---------------------------------------------------------------%>
         <%#*A controller-ből és a template-ből is kiírhatjuk a címet: %>
-        <%= content_tag( :a, "controller-ből: ", :class => "comment")%>
-        <%= content_tag( :div, "#{ @title }", :class => "title")%>
+        <%= content_tag :a, "controller-ből: ", :class => "comment"%>
+        <%= content_tag :h1, "#{ @title }"%>
+        <%#= content_tag( :div, "#{ @title }", :class => "title")%>
 
         <%= content_tag :a, "template-ből:", :class => "comment" %>
-        <%= content_tag :div, "#{yield(:title) if show_title?}", :class => "title" %>
+        <%= content_tag :h1, "#{yield(:title) if show_title?}" %>
         <%#*---------------------------------------------------------------%>
         <%#*<div id="content_inside" class="rounded-corners">%>
         <% flash.each do |name, msg| %>

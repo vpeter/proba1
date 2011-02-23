@@ -18,6 +18,7 @@ body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+  color: wheat;
 }
 
 a img {
@@ -25,7 +26,7 @@ a img {
 }
 
 a {
-  color: #fba;
+  color: wheat;
 }
 
 .clear {
@@ -81,23 +82,22 @@ a {
   margin: 0;
 }
 
+/*---------------------------------------*/
 /*----------- saját rész ----------------*/
+/*---------------------------------------*/
 
-.title {
+h1 {
     color: wheat;
     font-size: 24px;
-/*    text-transform: capitalize;*/
     letter-spacing: 1px;
     word-spacing: 5px;
     margin-top: 5px;
     margin-bottom: 20px;
 }
-
-.title:first-letter {
+h1:first-letter {
     text-transform: uppercase;
 }
-
-.comment {
+a.comment {
     background-color: #f99;
     color: red;
     font-family: monospace;
@@ -106,60 +106,60 @@ a {
     padding-bottom: 2px;
     padding-left: 4px;
     padding-right: 4px;
-}
-
-a.comment {
     text-decoration: none;
     opacity:.2;
 }
-
 a.comment:hover{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    opacity:0.6;
+}
+a.comment:active{
+    font-size: 1.5em;
+    letter-spacing: 3px;
     opacity:1;
 }
-.comment:before {
+a.comment:before {
     content: "";
     padding: 10px;
     background-image: url("/images/pencil_small.png");
     background-repeat: no-repeat;
     background-position: left center;
 }
-
 #container {
     width: 960px;
-    min-height: 700px;
+    min-height: 1000px;
     margin: 0 auto;
     background-color: #FFF;
 }
-
 #head2 {
     position: relative;
     width: 100%;
     height: 160px;
     background-image: url("/images/header.jpg");  background-repeat: repeat-x;
 }
-
 #heading {
-    position: absolute; top: 40px; left: 60px;
-    width: 850px;
+    position: absolute; top: 50px; left: 60px;
+/*    width: 850px;*/
     height: 60px;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: 900;
     color: #212629;
     text-transform: uppercase;
     text-shadow: 3px 3px 4px #821217;
 }
-
-#content {
-    width: 900px;
-    min-height: 540px;
-    background-color: #212629;
-    padding: 30px;
+#logo {
+    position: absolute; top: 30px; right: 30px;
 }
-
+#content {
+    width: 904px;
+    min-height: 840px;
+    background-color: #212629;
+    padding: 28px;
+}
 #content h3 {
     color: #ffeeba;
 }
-
 .content_inside {
     padding: 60px;
     background-color: #ffeeba;
@@ -168,7 +168,56 @@ a.comment:hover{
     -khtml-border-radius: 10px;
     border-radius: 10px;
 }
-
+.nyitokep {
+    position: relative;
+    width: 904px;
+    height: 304px;
+    margin-bottom: 50px;
+}
+.big-button {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    margin-bottom: -30px;
+    background-color: #821217;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 5px 5px 5px black; /* Firefox */
+    -webkit-box-shadow: 5px 5px 5px black; /* Safari and Chrome */
+    box-shadow: 5px 5px 5px black;
+}
+.big-button a{
+    text-align: center;
+    padding: 16px;
+    word-spacing: .5em;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+.big-button p {
+    line-height: 0em;
+    font-size: 0.7em;
+}
+.kicsi_betu{
+    font-size: 80%;
+}
+.felszolitas {
+    color: darkorange;
+    letter-spacing: 0.03em;
+    word-spacing: 0.2em;
+}
+.tajekoztatas {
+    color: mediumaquamarine;
+    letter-spacing: 0.03em;
+    word-spacing: 0.2em;
+}
 #nav {
     position: absolute; bottom: 0px; left: 60px;
 }
@@ -177,21 +226,16 @@ a.comment:hover{
     margin: 0px;
     padding: 3px;
 }
-
 #nav ul li{
 /* ez szedi le aa lista pontjainak  elejérőla béna kis pöttyeket*/
 	list-style-type: none;
 /* ez rakja egymás mellé a lista elemeit, így lesz egy vízszintes menüd*/
 	float: left;
 }
-
 #nav a {
-/*ez adja a jobb és bal térközt  a menük szövegeinek két oldalán*/
-	padding-right: 20px;
-	padding-left: 20px;
-/*ez adja a kis elválasztó vonalat, átlátszik alatta a háttér*/
+	padding-right: 15px;
+	padding-left: 15px;
 	margin-left: 1px;
-/*ettől válik érzékennyé az egész box a kurzorra*/
 	display: block;
 	line-height: 26px;
 	font-size: 12px;
@@ -210,43 +254,32 @@ a.comment:hover{
 #nav a:hover {
         color: white;
 }
-
 #nav .menu_home a {
-/*	line-height: 27px;*/
-/*	background: #212629;*/
         color: #78000a;
-        background-image: url("/images/home_icon_kicsi.png");
+        background-image: url("/images/home_icon_small_SandyBrown.png");
         background-repeat: no-repeat;
         background-position: center center;
 }
-
 #nav .menu_home_actual a {
 	line-height: 27px;
 	background: #212629;
         color: #212629;
-        background-image: url("/images/home_icon_kicsi.png");
+        background-image: url("/images/home_icon_small.png");
         background-repeat: no-repeat;
         background-position: center center;
 }
-
 #nav .menu_actual a {
 	line-height: 27px;
 	background: #212629;
         color: white;
 }
-
 #nav a:active   {
         background: #78000a;
 }
-
 input[type="text"]
 {
-    /*width:150px;*/
-    /*display:block;*/
-    /*margin-bottom:10px;*/
     background-color:darkkhaki;
 }
-
 input:focus {
     background-color:greenyellow;
 }

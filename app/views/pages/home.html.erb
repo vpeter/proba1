@@ -1,14 +1,29 @@
 <% title t("home.title") %>
-<%=  image_tag "neevjegykartya_online.png" %>
-Gondoljon az eső benyomásra!
-A névjegykártya átadásával személyesebbé teheti a partnerekkel folytatott megbeszéléseket valamint erősítheti az ön által képviselt cég terméke vagy szolgáltatása iránti bizalmat is.
-Ilyen névjegykártyákra számíthat
-minőségi papíron
-kiváló nyomattal
-matt vagy fényes fóliával
-vastag fóliával laminálva
-sarokkerekítéssel
-kedvező árakon
-egyszerűen rendelhető
-gyors átfutással
-házhozszállítással
+<p>Itt könnyedén rendelhet igényesen kivitelezett névjegykártyákat
+  saját magának, vagy cége számára</p>
+<div class="nyitokep">
+  <%=  image_tag "nevjegykartya_online.png" %>
+  <div class="big-button">
+    <%#*<a>Árak  megrendelés</a>%>
+    <a href="/orders">Árak <p class="kicsi_betu">és</p> megrendelés</a>
+    <%#*<a href="#">Árak <p> és </p> megrendelés</a>%>
+    <%#= link_to "Árak #{content_tag( :br)} megrendelés", :orders %>
+  </div>
+</div>
+
+<h2 class ="felszolitas">Gondoljon az eső benyomásra!</h2>
+<p>A névjegykártya átadásával személyesebbé teheti a partnerekkel
+  folytatott megbeszéléseket valamint erősítheti az ön által képviselt
+  cég terméke vagy szolgáltatása iránti bizalmat is.</p>
+<h4 class ="tajekoztatas">Ilyen névjegykártyákra számíthat:</h4>
+<ul>
+  <li>minőségi papíron</li>
+  <li>kiváló nyomattal</li>
+  <li>matt vagy fényes fóliával</li>
+  <li>vastag fóliával laminálva</li>
+  <li>sarokkerekítéssel</li>
+  <li>kedvező árakon</li>
+  <li>egyszerűen rendelhető</li>
+  <li>gyors átfutással</li>
+  <li>házhozszállítással</li>
+</ul>
