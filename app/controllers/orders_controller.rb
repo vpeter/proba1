@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @title = "itt új rendelést vihet fel"
   end
 
   def create
