@@ -1,16 +1,90 @@
-<% title t("order.title_order") %>
+<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @order.name %>
+  <b>Type:</b>
+  <%= @order.type %>
 </p>
+
 <p>
-  <strong>Price:</strong>
+  <b>Print:</b>
+  <%= @order.print %>
+</p>
+
+<p>
+  <b>Corner:</b>
+  <%= @order.corner %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @order.quantity %>
+</p>
+
+<p>
+  <b>Print ready:</b>
+  <%= @order.print_ready %>
+</p>
+
+<p>
+  <b>Price:</b>
   <%= @order.price %>
 </p>
 
 <p>
-  <%= link_to t("order.edit").capitalize, edit_order_path(@order) %> |
-  <%= link_to t("order.destroy").capitalize, @order, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to t("order.view_all").capitalize, orders_path %>
+  <b>Contact name:</b>
+  <%= @order.contact_name %>
 </p>
+
+<p>
+  <b>Contact phone:</b>
+  <%= @order.contact_phone %>
+</p>
+
+<p>
+  <b>Contact mail:</b>
+  <%= @order.contact_mail %>
+</p>
+
+<p>
+  <b>Contact note:</b>
+  <%= @order.contact_note %>
+</p>
+
+<p>
+  <b>Billing name:</b>
+  <%= @order.billing_name %>
+</p>
+
+<p>
+  <b>Billing address:</b>
+  <%= @order.billing_address %>
+</p>
+
+<p>
+  <b>Delivery note:</b>
+  <%= @order.delivery_note %>
+</p>
+
+<p>
+  <b>Takeover:</b>
+  <%= @order.takeover %>
+</p>
+
+<p>
+  <b>Payment:</b>
+  <%= @order.payment %>
+</p>
+
+<p>
+  <b>Order note:</b>
+  <%= @order.order_note %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @order.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,7 +1,65 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id              :integer         not null, primary key
+#  order_type      :string(255)
+#  print           :string(255)
+#  corner          :boolean
+#  quantity        :integer
+#  print_ready     :boolean
+#  price           :integer
+#  contact_name    :string(255)
+#  contact_phone   :string(255)
+#  contact_mail    :string(255)
+#  contact_note    :text
+#  billing_name    :string(255)
+#  billing_address :string(255)
+#  delivery_note   :text
+#  takeover        :string(255)
+#  payment         :string(255)
+#  order_note      :text
+#  status          :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
 one:
-  name: MyString
+  type: MyString
+  print: MyString
+  corner: false
+  quantity: 1
+  print_ready: false
   price: 1
+  contact_name: MyString
+  contact_phone: MyString
+  contact_mail: MyString
+  contact_note: MyText
+  billing_name: MyString
+  billing_address: MyString
+  delivery_note: MyText
+  takeover: MyString
+  payment: MyString
+  order_note: MyText
+  status: MyString
 
 two:
-  name: MyString
+  type: MyString
+  print: MyString
+  corner: false
+  quantity: 1
+  print_ready: false
   price: 1
+  contact_name: MyString
+  contact_phone: MyString
+  contact_mail: MyString
+  contact_note: MyText
+  billing_name: MyString
+  billing_address: MyString
+  delivery_note: MyText
+  takeover: MyString
+  payment: MyString
+  order_note: MyText
+  status: MyString

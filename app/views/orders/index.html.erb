@@ -1,21 +1,55 @@
-<% title t("order.title_orders") %>
+<h1>Listing orders</h1>
+
 <table>
   <tr>
-    <th><%=t("order.name").capitalize%></th>
-    <th><%=t("order.price").capitalize%></th>
+    <th>Type</th>
+    <th>Print</th>
+    <th>Corner</th>
+    <th>Quantity</th>
+    <th>Print ready</th>
+    <th>Price</th>
+    <th>Contact name</th>
+    <th>Contact phone</th>
+    <th>Contact mail</th>
+    <th>Contact note</th>
+    <th>Billing name</th>
+    <th>Billing address</th>
+    <th>Delivery note</th>
+    <th>Takeover</th>
+    <th>Payment</th>
+    <th>Order note</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
-  <% for order in @orders %>
-    <tr>
-      <td><%= order.name %></td>
-      <td><%= order.price %></td>
-      <td><%= link_to t("order.show").capitalize, order %></td>
-      <td><%= link_to t("order.edit").capitalize, edit_order_path(order) %></td>
-      <td><%= link_to t("order.destroy").capitalize, order, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.type %></td>
+    <td><%= order.print %></td>
+    <td><%= order.corner %></td>
+    <td><%= order.quantity %></td>
+    <td><%= order.print_ready %></td>
+    <td><%= order.price %></td>
+    <td><%= order.contact_name %></td>
+    <td><%= order.contact_phone %></td>
+    <td><%= order.contact_mail %></td>
+    <td><%= order.contact_note %></td>
+    <td><%= order.billing_name %></td>
+    <td><%= order.billing_address %></td>
+    <td><%= order.delivery_note %></td>
+    <td><%= order.takeover %></td>
+    <td><%= order.payment %></td>
+    <td><%= order.order_note %></td>
+    <td><%= order.status %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
 </table>
 
-<p><%= link_to t("order.new_order").capitalize, new_order_path(order) %></p>
-<div class="content_inside">
-  Alma
-</div>
+<br />
+
+<%= link_to 'New Order', new_order_path %>

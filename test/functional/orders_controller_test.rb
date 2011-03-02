@@ -1,54 +1,49 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionController::TestCase
-  def test_index
+  setup do
+    @order = orders(:one)
+  end
+
+  test "should get index" do
     get :index
-    assert_template 'index'
+    assert_response :success
+    assert_not_nil assigns(:orders)
   end
 
-  def test_show
-    get :show, :id => Order.first
-    assert_template 'show'
-  end
-
-  def test_new
+  test "should get new" do
     get :new
-    assert_template 'new'
+    assert_response :success
   end
 
-  def test_create_invalid
-    Order.any_instance.stubs(:valid?).returns(false)
-    post :create
-    assert_template 'new'
+  test "should create order" do
+    assert_difference('Order.count') do
+      post :create, :order => @order.attributes
+    end
+
+    assert_redirected_to order_path(assigns(:order))
   end
 
-  def test_create_valid
-    Order.any_instance.stubs(:valid?).returns(true)
-    post :create
-    assert_redirected_to order_url(assigns(:order))
+  test "should show order" do
+    get :show, :id => @order.to_param
+    assert_response :success
   end
 
-  def test_edit
-    get :edit, :id => Order.first
-    assert_template 'edit'
+  test "should get edit" do
+    get :edit, :id => @order.to_param
+    assert_response :success
   end
 
-  def test_update_invalid
-    Order.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Order.first
-    assert_template 'edit'
+  test "should update order" do
+    put :update, :id => @order.to_param, :order => @order.attributes
+    assert_redirected_to order_path(assigns(:order))
   end
 
-  def test_update_valid
-    Order.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Order.first
-    assert_redirected_to order_url(assigns(:order))
-  end
+  test "should destroy order" do
+    assert_difference('Order.count', -1) do
+      delete :destroy, :id => @order.to_param
+    end
 
-  def test_destroy
-    order = Order.first
-    delete :destroy, :id => order
-    assert_redirected_to orders_url
-    assert !Order.exists?(order.id)
+    assert_redirected_to orders_path
   end
 end

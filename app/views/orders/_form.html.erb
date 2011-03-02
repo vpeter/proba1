@@ -1,12 +1,62 @@
-<%= form_for @order do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label t("order.name") %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label t("order.price") %><br />
-    <%= f.text_field :price %>
-  </p>
-  <p><%= f.submit %></p>
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+        <%# SimpleForm.wrapper_tag = :div %>
+
+  <div class="inputs">
+    <fieldset>
+      <%= content_tag :a, "???", :class => "help" %>
+      <legend>Típus és darabszám megadása</legend>
+        <%= f.input :order_type, :collection => Order::ORDERTYPES.map{|i| [t("simple_form.values.order.order_type.#{i}"),i]}, :prompt => "Na ez a prompt kiírása" %>
+        <%= f.input :print, :collection => Order::PRINTTYPES.map{|i| [t("simple_form.values.order.print.#{i}"),i]}, :prompt => "Na ez a prompt kiírása" %>
+        <%= f.input :quantity, :lenght => 10 %>
+        <%= f.input :corner %>
+    </fieldset>
+    <fieldset>
+      <legend>A kívánt grafika megadása</legend>
+        <%#= f.input :print_ready, :as => :radio, :hint => "No special characters." %>
+        <%= f.collection_radio :print_ready, [[true, 'Rendelkezem grafikával'] ,[false, 'Szerkesztést kérek']], :first, :last %>
+      <%#*<br /><br /><br /><p>itt a magyarázat</p>%>
+    </fieldset>
+    <fieldset>
+      <legend>Fájl feltöltése</legend>
+        <%= f.input :contact_name, :label => "Fájl" %>
+    </fieldset>
+    <fieldset>
+      <legend>Megrendelő adatai</legend>
+        <%= f.input :contact_name %>
+        <%= f.input :contact_phone %>
+        <%= f.input :contact_mail %>
+        <%= f.input :contact_note %>
+    </fieldset>
+    <fieldset>
+      <legend>Számlázási adatok</legend>
+        <%= f.input :billing_name %>
+        <%= f.input :billing_address %>
+    </fieldset>
+    <fieldset>
+      <legend>Szállítási adatok</legend>
+        <%= f.input :delivery_note %>
+    </fieldset>
+    <fieldset>
+      <legend>Átvétel módja</legend>
+        <%= f.input :takeover %>
+    </fieldset>
+    <fieldset>
+      <legend>Fizetés módja</legend>
+        <%= f.input :payment %>
+    </fieldset>
+    <fieldset>
+      <legend>Megjegyzés</legend>
+        <%= f.input :order_note %>
+    </fieldset>
+    <fieldset>
+      <legend>Megrendelés</legend>
+        <%= f.button :submit, 'Megrendelem', :confirm => 'Are you sure?' %>
+    </fieldset>
+        <%#= f.input :price %>
+        <%#= f.input :status %>
+  </div>
+
+  <div class="actions">
+  </div>
 <% end %>

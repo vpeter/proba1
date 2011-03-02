@@ -2,6 +2,8 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title).capitalize : "Untitled" %></title>
+    <%#= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%#= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
@@ -18,7 +20,7 @@
         </div>
         <%  @menu_items = [
           {:link_text => ". . .",                   :contr => "pages",  :action => "home"},
-          {:link_text => "áraink - megrendelés",    :contr => "orders", :action => "index"},
+          {:link_text => "áraink - megrendelés",    :contr => "orders", :action => "new"},
           {:link_text => "megrendelés menete",      :contr => "pages",  :action => "order_description"},
           {:link_text => "elérhetőség",             :contr => "pages",  :action => "contact"},
           {:link_text => "teljesítési feltételek",  :contr => "pages",  :action => "policy"},
@@ -45,11 +47,10 @@
       <div id="content">
         <%#*---------------------------------------------------------------%>
         <%#*A controller-ből és a template-ből is kiírhatjuk a címet: %>
-        <%= content_tag :a, "controller-ből: ", :class => "comment"%>
-        <%= content_tag :h1, "#{ @title }"%>
-        <%#= content_tag( :div, "#{ @title }", :class => "title")%>
+        <%#= content_tag :a, "controller-ből: ", :class => "comment"%>
+        <%#= content_tag :h1, "#{ @title }"%>
 
-        <%= content_tag :a, "template-ből:", :class => "comment" %>
+        <%#= content_tag :a, "template-ből:", :class => "comment" %>
         <%= content_tag :h1, "#{yield(:title) if show_title?}" %>
         <%#*---------------------------------------------------------------%>
         <%#*<div id="content_inside" class="rounded-corners">%>

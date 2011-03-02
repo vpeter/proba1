@@ -6,6 +6,7 @@ gem "nifty-generators", :group => :development
 gem "simple_form"
 
 group :development, :test do
+  gem 'annotate'
   gem 'heroku'
 end
 # Bundle edge Rails instead:
