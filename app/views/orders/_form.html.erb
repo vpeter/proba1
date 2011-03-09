@@ -1,62 +1,93 @@
 <%= simple_form_for(@order) do |f| %>
   <%= f.error_notification %>
         <%# SimpleForm.wrapper_tag = :div %>
-
-  <div class="inputs">
-    <fieldset>
-      <%= content_tag :a, "???", :class => "help" %>
-      <legend>Típus és darabszám megadása</legend>
-        <%= f.input :order_type, :collection => Order::ORDERTYPES.map{|i| [t("simple_form.values.order.order_type.#{i}"),i]}, :prompt => "Na ez a prompt kiírása" %>
-        <%= f.input :print, :collection => Order::PRINTTYPES.map{|i| [t("simple_form.values.order.print.#{i}"),i]}, :prompt => "Na ez a prompt kiírása" %>
+  <%#*<div class="inputs">%>
+    <fieldset class ="fildset-1">
+      <% legend =  %>
+      <%= content_tag(:legend, "1. Típus és darabszám megadása" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Típus és darabszám megadása témakörhöz" ) %></div>
+        <%= f.input :order_type, :collection => Order::ORDERTYPES.map{|i| [t("simple_form.values.order.order_type.#{i}"),i]}, :prompt => "Nincs kiválasztva" %>
+        <%= f.input :print, :collection => Order::PRINTTYPES.map{|i| [t("simple_form.values.order.print.#{i}"),i]}, :prompt => "Nincs kiválasztva" %>
         <%= f.input :quantity, :lenght => 10 %>
-        <%= f.input :corner %>
+        <%= f.input :corner, :hint => false %>
     </fieldset>
-    <fieldset>
-      <legend>A kívánt grafika megadása</legend>
-        <%#= f.input :print_ready, :as => :radio, :hint => "No special characters." %>
+    <fieldset class ="fildset-2">
+      <%= content_tag(:legend, "2. Grafika megadása" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Grafika megadása témakörhöz" ) %></div>
+        <%#= f.label :print_ready %>
         <%= f.collection_radio :print_ready, [[true, 'Rendelkezem grafikával'] ,[false, 'Szerkesztést kérek']], :first, :last %>
-      <%#*<br /><br /><br /><p>itt a magyarázat</p>%>
+        <%#= content_tag(:p, " Tekintse meg a nyomdakész anyag jellemzőit és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!", :class => "form-2-1") %>
+        <p class = "form-2-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-2-2">Válassza ezt a lehetőséget, ha egyáltalán nem rendelkezik grafikával vagy a meglévő grafika nem teljesen felel meg a <a href="#">nyomdakész anyag jellemzőinek!</a>
+        <br />Ebben az esetben kollégánk felveszi önnel a kapcsolatot az Ön által megadott elérhetőségen.
+        <br />Tekintse meg az általunk kínált <a href="#">szerkesztési lehetőségeket!</a></p>
     </fieldset>
-    <fieldset>
-      <legend>Fájl feltöltése</legend>
+    <fieldset class ="fildset-3">
+      <%= content_tag(:legend, "3. Fájl feltöltése" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fájl feltöltése témakörhöz" ) %></div>
         <%= f.input :contact_name, :label => "Fájl" %>
     </fieldset>
-    <fieldset>
-      <legend>Megrendelő adatai</legend>
+    <fieldset class ="fildset-4">
+      <%= content_tag(:legend, "4. Megrendelő adatai" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megrendelő adatai témakörhöz" ) %></div>
         <%= f.input :contact_name %>
         <%= f.input :contact_phone %>
         <%= f.input :contact_mail %>
         <%= f.input :contact_note %>
     </fieldset>
-    <fieldset>
-      <legend>Számlázási adatok</legend>
+    <fieldset class ="fildset-5">
+      <%= content_tag(:legend, "5. Számlázási adatok" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Számlázási adatok témakörhöz" ) %></div>
         <%= f.input :billing_name %>
         <%= f.input :billing_address %>
     </fieldset>
-    <fieldset>
-      <legend>Szállítási adatok</legend>
+    <fieldset class ="fildset-6">
+      <%= content_tag(:legend, "6. Szállítási adatok" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Szállítási adatok témakörhöz" ) %></div>
         <%= f.input :delivery_note %>
     </fieldset>
-    <fieldset>
-      <legend>Átvétel módja</legend>
-        <%= f.input :takeover %>
+    <fieldset class ="fildset-7">
+      <%= content_tag(:legend, "7. Átvétel módja" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Átvétel módja témakörhöz" ) %></div>
+        <%= f.collection_radio :takeover, [["a", 'Személyes átvétellel, 48 órán belül'], ["b", 'Kiszállítással 5 nap alatt (Budapestre ingyenes, vidékre 2.000 Ft)'],["c", 'Kiszállítással 48 óra alatt (csak Budapesten - 2.000 Ft)']], :first, :last %>
+        <p class = "form-7-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-7-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-7-3">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <%#= f.input :takeover %>
     </fieldset>
-    <fieldset>
-      <legend>Fizetés módja</legend>
-        <%= f.input :payment %>
+    <fieldset class ="fildset-8">
+      <%= content_tag(:legend, "8. Fizetés módja" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fizetés módja témakörhöz" ) %></div>
+        <%= f.collection_radio :payment, [["a", 'Előzetes átutalással (a megrendelést követően elküldjük a proforma számlát)'], ["b", 'Átvételkor készpénzzel (15.000 Ft alatti megrendelés esetén választható)']], :first, :last %>
+        <p class = "form-8-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-8-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <%#= f.input :payment %>
     </fieldset>
-    <fieldset>
-      <legend>Megjegyzés</legend>
+    <fieldset class ="fildset-9">
+      <%= content_tag(:legend, "9. Megjegyzés" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megjegyzés témakörhöz" ) %></div>
         <%= f.input :order_note %>
     </fieldset>
-    <fieldset>
-      <legend>Megrendelés</legend>
-        <%= f.button :submit, 'Megrendelem', :confirm => 'Are you sure?' %>
+    <fieldset class ="fildset-10">
+      <%= content_tag(:legend, "10. Megrendelés" ) %>
+      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megrendelés témakörhöz" ) %></div>
+        <%= f.button :submit, 'Megrendelem' %>
     </fieldset>
         <%#= f.input :price %>
         <%#= f.input :status %>
-  </div>
+  <%#*</div>%>
 
   <div class="actions">
   </div>
 <% end %>
+
+
+      <%#*-------------- javascript-es cucc ----------------%>
+      <%#*<div id="kerdojel1" onMOuseOver="document.getElementById('valaszjel1').style.visibility='visible'", onMOuseOut="document.getElementById('valaszjel1').style.visibility='hidden'">%>
+        <%#*?%>
+        <%#*<div id="valaszjel1" >%>
+          <%#*<h4>Az a súgó-info szöveges tartalom</h4>%>
+          <%#*<p>Az a súgó-info szöveges tartalom</p>%>
+        <%#*</div>%>
+      <%#*</div>%>
+      <%#*-------------- javascript-es cucc vége ----------------%>

@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.1'
-gem 'sqlite3-ruby', :require => 'sqlite3', :group => :development
-gem "nifty-generators", :group => :development
 gem "simple_form"
 
 group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem "nifty-generators"
   gem 'annotate'
   gem 'heroku'
 end

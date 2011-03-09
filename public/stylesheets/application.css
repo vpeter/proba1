@@ -15,7 +15,7 @@ table{border-collapse:collapse;border-spacing:0}*/
 
 
 body {
-  background-color: #4B7399;
+  background-color: #774;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   color: wheat;
@@ -97,34 +97,14 @@ h1 {
 h1:first-letter {
     text-transform: uppercase;
 }
-a.comment {
-    background-color: #f99;
-    color: red;
-/*    font-family: monospace;*/
-    font-size: 12px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
-    text-decoration: none;
-    opacity:.2;
-}
-a.comment:hover{
-    font-size: 1.2em;
-    letter-spacing: 1px;
-    opacity:0.6;
-}
-a.comment:active{
-    font-size: 1.5em;
-    letter-spacing: 3px;
-    opacity:1;
-}
-a.comment:before {
-    content: "";
+a.help {
+    background-image: url("/images/pencil.png");
     padding: 10px;
-    background-image: url("/images/pencil_small.png");
-    background-repeat: no-repeat;
-    background-position: left;
+    text-decoration: none;
+    opacity: 0.6;
+}
+a.help:hover{
+    opacity: 1;
 }
 #container {
     width: 960px;
@@ -195,6 +175,9 @@ h3 {
     -moz-box-shadow: 5px 5px 5px black; /* Firefox */
     -webkit-box-shadow: 5px 5px 5px black; /* Safari and Chrome */
     box-shadow: 5px 5px 5px black;
+}
+.big-button:hover {
+    background-color: #f23;
 }
 .big-button a{
     text-align: center;
@@ -306,101 +289,99 @@ tajekoztatas h3{
 /* ------------  F O R M  ---------------*/
 /*---------------------------------------*/
 
-fieldset{
-    margin-bottom: 20px; padding: 0px 20px;
+/*.inputs {
+    position: relative;
+    border: #00cc00 dotted 1px;
+}*/
+fieldset, legend, #kerdojel {border: #443 solid 2px;}
+fieldset{margin-bottom: 20px; padding: 20px 20px 10px 20px;
     background: #332;
-    -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 4px;
-/*    font-family: monaco,"lucida grande",tahoma,verdana,arial,sans-serif;*/
-/*    font-size: 25px;*/
+    -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 4px;}
+.fildset-2 {padding-bottom: 30px;
+}
+legend, #kerdojel {
+    font-weight: bold;
+    background: #221;
+    -moz-border-radius: 2em; -webkit-border-radius: 2em; -khtml-border-radius: 2em; border-radius: 2em;
+}
+legend, #kerdojel, abbr {
+    color: #fc3;
 }
 legend {
     margin-left: 20px; padding: 8px 20px;
-    -moz-border-radius: 2em; -webkit-border-radius: 2em; -khtml-border-radius: 2em; border-radius: 2em;
-    font-weight: bold; letter-spacing: 0.1em; word-spacing: 0.15em; text-transform: uppercase;
-    background: #221; color: #fc6;
+    letter-spacing: 0.1em; word-spacing: 0.15em; text-transform: uppercase;
 }
-fieldset, legend {
-    border: #443 solid 2px;
+#kerdojel {
+    float: right; position: relative; top: -56px;
+    padding: 8px 10px;
 }
-div.input{
-    margin: 20px 0;
-/*    border: red solid 1px;*/
+#kerdojel span {
+    display: none;
 }
-div.text {
-/*    height: 150px;*/
-/*    border: yellow solid 2px;*/
+#kerdojel:hover {
+    color: wheat; background: #110; cursor: pointer;
+}
+#kerdojel:hover span {
+    display:block; position: absolute; left: -400px; top: 40px; width: 360px; padding: 10px 20px; z-index: 100;
+    color: #221; background: #fc3; border: solid #221 1px;
 }
 label {
-    float: left; clear: left ;margin: 0px 10px; padding: 4px; width: 200px;
-    text-align: right;
-    vertical-align: middle;
-/*    border: greenyellow dashed 1px;*/
+    float: left; clear: left ;margin-right: 20px; width: 200px;
+    text-align: right; font-weight: bold;
 }
 abbr {
-    color: #fc6;
-    font-weight: bold;
-    border: transparent;
-/*    border: greenyellow solid 1px;*/
+    font-weight: bold; border: transparent;
+}
+label.collection_radio {margin-left: 20px; margin-top: 0px; margin-bottom: 80px; width: auto; display: block;}
+.input{
+    margin-bottom: 10px;
 }
 input, select, textarea {
-    width: 400px; padding: 4px 8px;
-/*    vertical-align: middle;*/
-    background-color: wheat; color: #787362; border-width: 0;
-    font-weight: bold;
-    vertical-align: middle;
-/*    border: cyan dotted 1px;*/
-}
-input, select, textarea {
+    border-color: transparent; border-width: 0;
     -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px;
 }
-input.numeric {
-    width: 80px;
-/*    border: red dotted 2px;*/
-}
-textarea.text {
-    height: 150px;
-/*    border: blue dotted 3px;*/
-}
-input.boolean {
-    margin: 0; width: 13px; height: 30px;
-    vertical-align: middle;
-}
-input:focus, select:focus, textarea:focus {
-    background-color: #fc6;
-}
-input.button{
-    margin-left: 240px; margin-bottom: 20px; width: 120px;
-}
-input[type = "radio"] {
-    position: absolute;
-    left: 235px;
-/*    text-align: left;*/
-}
-label.collection_radio {
-/*    float: right;*/
-/*    margin-left: 240px;*/
-    margin-left: 245px; margin-top: 20px; margin-bottom: 20px; width: auto;
-    text-align: left;
-/*    border: chartreuse solid 2px;*/
-}
-.hint {
-    margin-left: 240px; display: block;
-    font-size: 0.9em; font-style: italic; letter-spacing: 0.05em;
-    opacity: 0.6;
-}
-
-/*
-.simple_form label.collection_radio {
-  margin-right: 10px;
-  margin-left: 2px;
-}
-
+input, select, textarea {background-color: wheat;}
+input.numeric {width: 80px;}
+textarea {width: 540px; height: 60px;}
+input.boolean {margin: 0; width: 13px; vertical-align: middle;}
+input[type = radio] {margin-right: 8px;}
+input:focus, select:focus, textarea:focus {background-color: #fc3;}
+.button{margin: 0 0 10px 220px; padding: 15px;
+    font-weight: 900; font-size: 20px;background-color: #ffa912; color: black;
+    -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 4px;}
+.button:hover {cursor: pointer; background-color: #e6ff12;}
+.hint {display: block; margin: 1px 0 0 225px;
+    letter-spacing: 0.05em; font-style: italic; font-size: 0.9em;}
 .simple_form .error {
-  clear: left;
-  margin-left: 120px;
-  font-size: 12px;
-  color: #D00;
-  display: block;
+/*    margin-left: 125px;*/
+    margin: 3px 250px 20px 150px; padding: 2px; display: block;
+    letter-spacing: 0.05em; text-align: center;
+/*    font-size: 1.2em; */
+    background-color: #191909; color: lightcoral;
 }
+fieldset p {position: absolute; margin: 22px 0 0 57px; width: 760px; line-height: 1.5em;}
+fieldset p, .hint {color: #997;}
+fieldset p a {color: #bb7; text-decoration: none; border-bottom: dashed 1px;}
+fieldset p a:hover {color: wheat;}
+.form-2-1 {margin-top: 22px;}
+.form-2-2 {margin-top: 121px;}
+.form-7-1 {margin-top: 22px;}
+.form-7-2 {margin-top: 121px;}
+.form-7-3 {margin-top: 220px;}
+.form-8-1 {margin-top: 22px;}
+.form-8-2 {margin-top: 121px;}
 
-*/
+/*-------------- javascript-es cucc ----------------*/
+/*#kerdojel1 {
+    margin: 0; position: relative; width: 30px; height: 24px; top: -35px; left: 820px; text-align: center;
+    background-color: #221; color: #fc6; border: #443 solid 2px; font-size: larger;
+    -moz-border-radius: 2em; -webkit-border-radius: 2em; -khtml-border-radius: 2em; border-radius: 2em;
+}
+#valaszjel1 {
+    z-index: 100; position: absolute; left: -480px; top: 30px; padding: 10px; width: 500px; height: 180px;
+    background: #fc6; border: 2px solid transparent; color: #221; text-align: left;
+    visibility: hidden; background: #fc6; border: 2px solid transparent; color: #221; text-align: left;
+}
+#valaszjel1 h1,h2,h3,h4,h5,h6 {
+    color: dodgerblue;
+}*/

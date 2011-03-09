@@ -127,6 +127,8 @@
         wrong_length: "nem megfelelő hosszúságú (%{count} karakter szükséges)"
         taken: "már foglalt"
         not_a_number: "nem szám"
+#        Az alábbi 1 sor saját beírás, mert nem volt meg
+        not_an_integer: "nem egész szám"
         greater_than: "nagyobb kell legyen, mint %{count}"
         greater_than_or_equal_to: "legalább %{count} kell legyen"
         equal_to: "pontosan %{count} kell legyen"
