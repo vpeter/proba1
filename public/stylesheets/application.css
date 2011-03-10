@@ -117,7 +117,7 @@ a.help:hover{
     position: relative;
     width: 100%;
     height: 160px;
-    background-image: url("/images/header.jpg");  background-repeat: repeat-x;
+    background-image: url("/images/header_02.jpg");  background-repeat: repeat-x;
 }
 #heading {
     position: absolute; top: 50px; left: 60px;
@@ -130,7 +130,7 @@ a.help:hover{
     text-shadow: 3px 3px 4px #821217;
 }
 #logo {
-    position: absolute; top: 30px; right: 30px;
+    position: absolute; top: 20px; right: 30px;
 }
 #content {
     width: 904px;
@@ -265,6 +265,12 @@ tajekoztatas h3{
 #nav .menu_home a {
     color: #78000a;
     background-image: url("/images/home_icon_small_SandyBrown.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#nav .menu_home a:hover {
+    color: #78000a;
+    background-image: url("/images/home_icon_small.png");
     background-repeat: no-repeat;
     background-position: center center;
 }

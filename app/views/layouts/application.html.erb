@@ -15,9 +15,9 @@
         <div id="heading">
           névjegykártya online
         </div>
-        <div id="logo">
-          <%=image_tag "Nevjegykartya_logo_nagy2.png" %>
-        </div>
+        <a href="/pages/home" id="logo">
+          <%=image_tag "Nevjegykartya_logo_02.png" %>
+        </a>
         <%  @menu_items = [
           {:link_text => ". . .",                   :contr => "pages",  :action => "home"},
           {:link_text => "áraink - megrendelés",    :contr => "orders", :action => "new"},
