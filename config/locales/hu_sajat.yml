@@ -7,14 +7,6 @@
 "hu":
   home:
     title: "ez a nyitólap"
-  order_description:
-    title: "a megrendelés menete"
-  contact:
-    title: "elérhetőségeink"
-  policy:
-    title: "teljesítési feltételeink"
-  faq:
-    title: "GY.I.K."
   order:
     title_orders: "az összes megrendelés"
     title_order: "a megrendelés adatai"
@@ -31,6 +23,31 @@
 
     name: "név"
     price: "ár"
+
+    order_type: "Papír és felület"
+    print: "Nyomtatás módja"
+    quantity: "Mennyiség"
+    corner: "Sarokkerekítéssel"
+    print_ready: "Nyomtatásra előkészített fájlt adok"
+    file: ""
+    contact_name: "Név"
+    contact_phone: "Telefonszáma"
+    contact_mail: "E-mail"
+    contact_note: "További adatok"
+    billing_name: "Név"
+    billing_address: "Cím"
+    delivery_note: "Adatok, információk"
+    takeover: "Átvétel módja"
+    payment: "Fizetés módja"
+    order_note: "Egyéb információk"
+  order_description:
+    title: "a megrendelés menete"
+  contact:
+    title: "elérhetőségeink"
+  policy:
+    title: "teljesítési feltételeink"
+  faq:
+    title: "Gyakran ismételt kérdések és azok válaszai"
   simple_form:
     labels:
       order:

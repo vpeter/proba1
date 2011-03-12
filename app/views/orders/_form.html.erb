@@ -3,7 +3,6 @@
         <%# SimpleForm.wrapper_tag = :div %>
   <%#*<div class="inputs">%>
     <fieldset class ="fildset-1">
-      <% legend =  %>
       <%= content_tag(:legend, "1. Típus és darabszám megadása" ) %>
       <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Típus és darabszám megadása témakörhöz" ) %></div>
         <%= f.input :order_type, :collection => Order::ORDERTYPES.map{|i| [t("simple_form.values.order.order_type.#{i}"),i]}, :prompt => "Nincs kiválasztva" %>
@@ -17,10 +16,10 @@
         <%#= f.label :print_ready %>
         <%= f.collection_radio :print_ready, [[true, 'Rendelkezem grafikával'] ,[false, 'Szerkesztést kérek']], :first, :last %>
         <%#= content_tag(:p, " Tekintse meg a nyomdakész anyag jellemzőit és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!", :class => "form-2-1") %>
-        <p class = "form-2-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
-        <p class = "form-2-2">Válassza ezt a lehetőséget, ha egyáltalán nem rendelkezik grafikával vagy a meglévő grafika nem teljesen felel meg a <a href="#">nyomdakész anyag jellemzőinek!</a>
+        <p class = "form-2-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-2-2">Válassza ezt a lehetőséget, ha egyáltalán nem rendelkezik grafikával vagy a meglévő grafika nem teljesen felel meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőinek!</a>
         <br />Ebben az esetben kollégánk felveszi önnel a kapcsolatot az Ön által megadott elérhetőségen.
-        <br />Tekintse meg az általunk kínált <a href="#">szerkesztési lehetőségeket!</a></p>
+        <br />Tekintse meg az általunk kínált <a href="/pages/faq/#szerki">szerkesztési lehetőségeket!</a></p>
     </fieldset>
     <fieldset class ="fildset-3">
       <%= content_tag(:legend, "3. Fájl feltöltése" ) %>
@@ -50,17 +49,17 @@
       <%= content_tag(:legend, "7. Átvétel módja" ) %>
       <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Átvétel módja témakörhöz" ) %></div>
         <%= f.collection_radio :takeover, [["a", 'Személyes átvétellel, 48 órán belül'], ["b", 'Kiszállítással 5 nap alatt (Budapestre ingyenes, vidékre 2.000 Ft)'],["c", 'Kiszállítással 48 óra alatt (csak Budapesten - 2.000 Ft)']], :first, :last %>
-        <p class = "form-7-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
-        <p class = "form-7-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
-        <p class = "form-7-3">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-7-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-7-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-7-3">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
         <%#= f.input :takeover %>
     </fieldset>
     <fieldset class ="fildset-8">
       <%= content_tag(:legend, "8. Fizetés módja" ) %>
       <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fizetés módja témakörhöz" ) %></div>
         <%= f.collection_radio :payment, [["a", 'Előzetes átutalással (a megrendelést követően elküldjük a proforma számlát)'], ["b", 'Átvételkor készpénzzel (15.000 Ft alatti megrendelés esetén választható)']], :first, :last %>
-        <p class = "form-8-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
-        <p class = "form-8-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="#">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-8-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
+        <p class = "form-8-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
         <%#= f.input :payment %>
     </fieldset>
     <fieldset class ="fildset-9">

@@ -41,7 +41,7 @@ a {
 }
 
 #flash_notice {
-  background-color: #CFC;
+  background-color: #CFC; color: darkgreen;
   border: solid 1px #6C6;
 }
 
@@ -125,9 +125,10 @@ a.help:hover{
     height: 60px;
     font-size: 3em;
     font-weight: 900;
-    color: #212629;
+    color: #78000a;
+/*    color: #212629;*/
     text-transform: uppercase;
-    text-shadow: 3px 3px 4px #821217;
+    text-shadow: 3px 3px 6px black;
 }
 #logo {
     position: absolute; top: 20px; right: 30px;
@@ -228,7 +229,7 @@ tajekoztatas h3{
     column-rule:4px outset ;
 }
 #nav {
-    position: absolute; bottom: 0px; left: 60px;
+    position: absolute; bottom: -2px; left: 60px;
 }
 
 #nav ul {
@@ -244,7 +245,7 @@ tajekoztatas h3{
 #nav a {
     padding-right: 15px;
     padding-left: 15px;
-    margin-left: 1px;
+    margin-left: 3px;
     display: block;
     line-height: 26px;
     font-size: 12px;
@@ -253,10 +254,10 @@ tajekoztatas h3{
     background: #78000a;
     border: 0px solid #00cc00;
     -moz-border-radius: 0px;
-    border-top-left-radius:13px 26px;
-    border-top-right-radius:13px 26px;
-    -moz-border-radius-topleft: 13px 26px;
-    -moz-border-radius-topright: 13px 26px;
+    border-top-left-radius:13px 13px;
+    border-top-right-radius:13px 13px;
+    -moz-border-radius-topleft: 13px 13px;
+    -moz-border-radius-topright: 13px 13px;
     text-transform: capitalize;
 }
 #nav a:hover {
@@ -274,21 +275,74 @@ tajekoztatas h3{
     background-repeat: no-repeat;
     background-position: center center;
 }
+#nav .menu_actual a, #nav .menu_home_actual a {
+    position: relative; top: -2px;
+    line-height: 26px; padding-top: 3px;
+    background: #212629; color: #212629;
+}
 #nav .menu_home_actual a {
-    line-height: 27px;
-    background: #212629;
     color: #212629;
     background-image: url("/images/home_icon_small.png");
     background-repeat: no-repeat;
     background-position: center center;
 }
 #nav .menu_actual a {
-    line-height: 27px;
-    background: #212629;
     color: white;
 }
 #nav a:active   {
     background: #78000a;
+}
+#nav-footer {
+    padding: 20px 0; height: 70px;
+    border-top: #677 dotted 2px;
+    background: #172023;
+}
+#nav-footer ul li {
+    float: left; padding: 10px 6px; list-style-type: none;
+    color: #677;
+}
+#nav-footer ul li a {
+    font-size: smaller; text-decoration: none;
+    color: #ff8b05;
+/*    color: dimgray;*/
+}
+#logo_footer {
+/*    vertical-align: middle;*/
+    float: right; width: 100px; height: 70px; margin: 0 20px;
+/*    border: solid #374043 1px;*/
+}
+
+
+/*---------------------------------------*/
+/* --------  T Á B L Á Z A T  -----------*/
+/*---------------------------------------*/
+
+table {
+    text-align: center;
+    color: #221;
+}
+thead th {
+    margin-bottom: 5px;
+    background: #fc3;
+    font-weight: bolder;
+}
+td {
+    background: #d7aa20;
+}
+tr:hover {
+    opacity: 0.9;
+}
+td:hover {
+/*    opacity: 0.3;*/
+    background: wheat;
+    font-weight: bolder; font-size: larger;
+    cursor: pointer;
+}
+th, td {
+    padding: 3px 1px;
+}
+th {
+    background: #daaa1a;
 }
 
 /*---------------------------------------*/
@@ -299,23 +353,26 @@ tajekoztatas h3{
     position: relative;
     border: #00cc00 dotted 1px;
 }*/
-fieldset, legend, #kerdojel {border: #443 solid 2px;}
-fieldset{margin-bottom: 20px; padding: 20px 20px 10px 20px;
+fieldset, legend, #kerdojel, #boxtitle, .box {border: #443 solid 2px;}
+fieldset, .box {margin-bottom: 20px; padding: 20px 20px 10px 20px;
     background: #332;
     -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 4px;}
 .fildset-2 {padding-bottom: 30px;
 }
-legend, #kerdojel {
+legend, #kerdojel, #boxtitle {
     font-weight: bold;
     background: #221;
     -moz-border-radius: 2em; -webkit-border-radius: 2em; -khtml-border-radius: 2em; border-radius: 2em;
 }
-legend, #kerdojel, abbr {
+h1, legend, #boxtitle, abbr {
     color: #fc3;
 }
-legend {
+legend, #boxtitle {
     margin-left: 20px; padding: 8px 20px;
     letter-spacing: 0.1em; word-spacing: 0.15em; text-transform: uppercase;
+}
+#boxtitle {
+    float: left; position: relative; bottom: 40px; margin-bottom: -40px;
 }
 #kerdojel {
     float: right; position: relative; top: -56px;
@@ -367,7 +424,7 @@ input:focus, select:focus, textarea:focus {background-color: #fc3;}
 }
 fieldset p {position: absolute; margin: 22px 0 0 57px; width: 760px; line-height: 1.5em;}
 fieldset p, .hint {color: #997;}
-fieldset p a {color: #bb7; text-decoration: none; border-bottom: dashed 1px;}
+fieldset p a {color: #bb7;}
 fieldset p a:hover {color: wheat;}
 .form-2-1 {margin-top: 22px;}
 .form-2-2 {margin-top: 121px;}
@@ -391,3 +448,8 @@ fieldset p a:hover {color: wheat;}
 #valaszjel1 h1,h2,h3,h4,h5,h6 {
     color: dodgerblue;
 }*/
+
+
+.box {
+    margin-top: 50px;
+}
