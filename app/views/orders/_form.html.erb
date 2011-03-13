@@ -4,7 +4,7 @@
   <%#*<div class="inputs">%>
     <fieldset class ="fildset-1">
       <%= content_tag(:legend, "1. Típus és darabszám megadása" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Típus és darabszám megadása témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Típus és darabszám megadása témakörhöz" ) %></div>
         <%= f.input :order_type, :collection => Order::ORDERTYPES.map{|i| [t("simple_form.values.order.order_type.#{i}"),i]}, :prompt => "Nincs kiválasztva" %>
         <%= f.input :print, :collection => Order::PRINTTYPES.map{|i| [t("simple_form.values.order.print.#{i}"),i]}, :prompt => "Nincs kiválasztva" %>
         <%= f.input :quantity, :lenght => 10 %>
@@ -12,7 +12,7 @@
     </fieldset>
     <fieldset class ="fildset-2">
       <%= content_tag(:legend, "2. Grafika megadása" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Grafika megadása témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Grafika megadása témakörhöz" ) %></div>
         <%#= f.label :print_ready %>
         <%= f.collection_radio :print_ready, [[true, 'Rendelkezem grafikával'] ,[false, 'Szerkesztést kérek']], :first, :last %>
         <%#= content_tag(:p, " Tekintse meg a nyomdakész anyag jellemzőit és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!", :class => "form-2-1") %>
@@ -23,12 +23,12 @@
     </fieldset>
     <fieldset class ="fildset-3">
       <%= content_tag(:legend, "3. Fájl feltöltése" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fájl feltöltése témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fájl feltöltése témakörhöz" ) %></div>
         <%= f.input :contact_name, :label => "Fájl" %>
     </fieldset>
     <fieldset class ="fildset-4">
       <%= content_tag(:legend, "4. Megrendelő adatai" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megrendelő adatai témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megrendelő adatai témakörhöz" ) %></div>
         <%= f.input :contact_name %>
         <%= f.input :contact_phone %>
         <%= f.input :contact_mail %>
@@ -36,18 +36,18 @@
     </fieldset>
     <fieldset class ="fildset-5">
       <%= content_tag(:legend, "5. Számlázási adatok" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Számlázási adatok témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Számlázási adatok témakörhöz" ) %></div>
         <%= f.input :billing_name %>
         <%= f.input :billing_address %>
     </fieldset>
     <fieldset class ="fildset-6">
       <%= content_tag(:legend, "6. Szállítási adatok" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Szállítási adatok témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Szállítási adatok témakörhöz" ) %></div>
         <%= f.input :delivery_note %>
     </fieldset>
     <fieldset class ="fildset-7">
       <%= content_tag(:legend, "7. Átvétel módja" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Átvétel módja témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Átvétel módja témakörhöz" ) %></div>
         <%= f.collection_radio :takeover, [["a", 'Személyes átvétellel, 48 órán belül'], ["b", 'Kiszállítással 5 nap alatt (Budapestre ingyenes, vidékre 2.000 Ft)'],["c", 'Kiszállítással 48 óra alatt (csak Budapesten - 2.000 Ft)']], :first, :last %>
         <p class = "form-7-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
         <p class = "form-7-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
@@ -56,7 +56,7 @@
     </fieldset>
     <fieldset class ="fildset-8">
       <%= content_tag(:legend, "8. Fizetés módja" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fizetés módja témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fizetés módja témakörhöz" ) %></div>
         <%= f.collection_radio :payment, [["a", 'Előzetes átutalással (a megrendelést követően elküldjük a proforma számlát)'], ["b", 'Átvételkor készpénzzel (15.000 Ft alatti megrendelés esetén választható)']], :first, :last %>
         <p class = "form-8-1">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
         <p class = "form-8-2">Kérjük, hogy csak akkor válassza ezt a lehetőséget, ha rendelkezik egy teljesen nyomdakész grafikával! Tekintse meg a <a href="/pages/faq/#nyomdai">nyomdakész anyag jellemzőit</a> és szükség esetén módosítsa a feltöltésre szánt anyagot. Ha akadályba ütközik, jelölje be a „szerkesztést kérek“ lehetőséget!</p>
@@ -64,12 +64,12 @@
     </fieldset>
     <fieldset class ="fildset-9">
       <%= content_tag(:legend, "9. Megjegyzés" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megjegyzés témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megjegyzés témakörhöz" ) %></div>
         <%= f.input :order_note %>
     </fieldset>
     <fieldset class ="fildset-10">
       <%= content_tag(:legend, "10. Megrendelés" ) %>
-      <div id="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megrendelés témakörhöz" ) %></div>
+      <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Megrendelés témakörhöz" ) %></div>
         <%= f.button :submit, 'Megrendelem' %>
     </fieldset>
         <%#= f.input :price %>

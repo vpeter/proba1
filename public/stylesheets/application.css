@@ -293,7 +293,7 @@ tajekoztatas h3{
     background: #78000a;
 }
 #nav-footer {
-    padding: 20px 0; height: 100px;
+    padding: 20px 0; height: 70px;
     border-top: #677 dotted 2px;
     background: #172023;
 }
@@ -353,13 +353,13 @@ th {
     position: relative;
     border: #00cc00 dotted 1px;
 }*/
-fieldset, legend, #kerdojel, #boxtitle, .box {border: #443 solid 2px;}
+fieldset, legend, .kerdojel, #boxtitle, .box {border: #443 solid 2px;}
 fieldset, .box {margin-bottom: 20px; padding: 20px 20px 10px 20px;
     background: #332;
     -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 4px;}
 .fildset-2 {padding-bottom: 30px;
 }
-legend, #kerdojel, #boxtitle {
+legend, .kerdojel, #boxtitle {
     font-weight: bold;
     background: #221;
     -moz-border-radius: 2em; -webkit-border-radius: 2em; -khtml-border-radius: 2em; border-radius: 2em;
@@ -374,17 +374,17 @@ legend, #boxtitle {
 #boxtitle {
     float: left; position: relative; bottom: 40px; margin-bottom: -40px;
 }
-#kerdojel {
+.kerdojel {
     float: right; position: relative; top: -56px;
     padding: 8px 10px;
 }
-#kerdojel span {
+.kerdojel span {
     display: none;
 }
-#kerdojel:hover {
+.kerdojel:hover {
     color: wheat; background: #110; cursor: pointer;
 }
-#kerdojel:hover span {
+.kerdojel:hover span {
     display:block; position: absolute; left: -400px; top: 40px; width: 360px; padding: 10px 20px; z-index: 100;
     color: #221; background: #fc3; border: solid #221 1px;
 }
@@ -435,7 +435,7 @@ fieldset p a:hover {color: wheat;}
 .form-8-2 {margin-top: 121px;}
 
 /*-------------- javascript-es cucc ----------------*/
-/*#kerdojel1 {
+/*.kerdojel1 {
     margin: 0; position: relative; width: 30px; height: 24px; top: -35px; left: 820px; text-align: center;
     background-color: #221; color: #fc6; border: #443 solid 2px; font-size: larger;
     -moz-border-radius: 2em; -webkit-border-radius: 2em; -khtml-border-radius: 2em; border-radius: 2em;
