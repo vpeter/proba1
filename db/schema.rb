@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110226105202) do
+ActiveRecord::Schema.define(:version => 20110312101503) do
 
   create_table "orders", :force => true do |t|
     t.string   "order_type"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20110226105202) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "vkey"
   end
 
 end

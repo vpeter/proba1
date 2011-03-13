@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.xml
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find_by_vkey(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -45,7 +45,8 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to(@order, :notice => 'Order was successfully created.') }
+        UserMailer.order_confirm(@order).deliver
+        format.html { redirect_to( order_path(@order.vkey), :notice => 'Order was successfully created.') }
         format.xml  { render :xml => @order, :status => :created, :location => @order }
       else
         format.html { render :action => "new" }
