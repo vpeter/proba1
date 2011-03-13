@@ -4,8 +4,13 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Megerosites</h1>
+    <h1>Megerősítés</h1>
     <p>
+    Tisztelt <%= @order.contact_name %>!<br/>
+    <%= "Tisztelt #{@order.contact_name}!" %><br/>
+    <%=  content_tag :h1, "szevasz" %>
+    <%=  content_tag :h2, "szevasz" %>
+    <%=  content_tag :h3, "szevasz" %>
       <%= @order.inspect %>.<br/>
     </p>
   </body>
