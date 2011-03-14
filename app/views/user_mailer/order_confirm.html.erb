@@ -6,12 +6,21 @@
   <body>
     <h1>Megerősítés</h1>
     <p>
-    Tisztelt <%= @order.contact_name %>!<br/>
-    <%= "Tisztelt #{@order.contact_name}!" %><br/>
-    <%=  content_tag :h1, "szevasz" %>
-    <%=  content_tag :h2, "szevasz" %>
-    <%=  content_tag :h3, "szevasz" %>
-      <%= @order.inspect %>.<br/>
+    <%#*Tisztelt <%= @order.contact_name %>!<br/>%>
+    <%#= "Tisztelt #{@order.contact_name}!" %><br/>
+    <%=  content_tag :h1, "Tisztelt #{@order.contact_name}!" %>
+    <%#=  content_tag :h2, "szevasz" %>
+    <%=  content_tag :p, "Az alábbi megrendelését nyilvántartásunkba vettük és hamarosan elkezdjük a kivitelezését is."%>
+    <%=  content_tag :p, "Üdvözlettel: A Perfect Lines Dgitális nyomda csapata"%>
+      Típusa: <%= @order.type %>.<br/>
+      Nyomtatás: <%= @order.print %>.<br/>
+      Darabszám: <%= @order.quantity %>.<br/>
+      Nyomtatásra kész: <%= @order.print_ready %>.<br/>
+      Megrendelő neve: <%= @order.contact_name %>.<br/>
+      Megrendelő telefonszáma: <%= @order.contact_phone %>.<br/>
+      Megrendelő email címe: <%= @order.contact_mail %>.<br/>
+      Megrendelő email címe: <%= @order.contact_mail %>.<br/>
+      <%#= @order.inspect %>.<br/>
     </p>
   </body>
 </html>
