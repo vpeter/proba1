@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-<%#*-------- Ez csak a mail próbája, később kitörlendő!!! ---------%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,7 +42,7 @@
       </tr>
       <tr>
         <td class ="definition">
-          Nyomtatásra kész: 
+          Nyomtatásra kész:
         </td>
         <td class ="value">
           <% if @order.print_ready %>
@@ -85,97 +83,3 @@
     <h4>Üdvözlettel: A Perfect Lines Digitális nyomda csapata</h4>
   </body>
 </html>
-<%#*---------------------------------------------------%>
-<div class="box">
-  <div id="boxtitle">
-    A megrendelés adatai
-  </div>
-  <p>
-    <b>Type:</b>
-    <%= @order.type %>
-  </p>
-
-  <p>
-    <b>Print:</b>
-    Nyomtatás: <%= t("simple_form.values.order.print.#{@order.print}") %>
-    <%= @order.print %>
-  </p>
-
-  <p>
-    <b>Corner:</b>
-    <%= @order.corner %>
-  </p>
-
-  <p>
-    <b>Quantity:</b>
-    <%= @order.quantity %>
-  </p>
-
-  <p>
-    <b>Print ready:</b>
-    <%= @order.print_ready %>
-  </p>
-
-  <p>
-    <b>Price:</b>
-    <%= @order.price %>
-  </p>
-
-  <p>
-    <b>Contact name:</b>
-    <%= @order.contact_name %>
-  </p>
-
-  <p>
-    <b>Contact phone:</b>
-    <%= @order.contact_phone %>
-  </p>
-
-  <p>
-    <b>Contact mail:</b>
-    <%= @order.contact_mail %>
-  </p>
-
-  <p>
-    <b>Contact note:</b>
-    <%= @order.contact_note %>
-  </p>
-
-  <p>
-    <b>Billing name:</b>
-    <%= @order.billing_name %>
-  </p>
-
-  <p>
-    <b>Billing address:</b>
-    <%= @order.billing_address %>
-  </p>
-
-  <p>
-    <b>Delivery note:</b>
-    <%= @order.delivery_note %>
-  </p>
-
-  <p>
-    <b>Takeover:</b>
-    <%= @order.takeover %>
-  </p>
-
-  <p>
-    <b>Payment:</b>
-    <%= @order.payment %>
-  </p>
-
-  <p>
-    <b>Order note:</b>
-    <%= @order.order_note %>
-  </p>
-
-  <p>
-    <b>Status:</b>
-    <%= @order.status %>
-  </p>
-</div>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>

@@ -45,7 +45,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        UserMailer.order_confirm(@order).deliver
+        UserMailer.order_confirm_mail(@order).deliver
         format.html { redirect_to( order_path(@order.vkey), :notice => 'Order was successfully created.') }
         format.xml  { render :xml => @order, :status => :created, :location => @order }
       else

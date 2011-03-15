@@ -28,7 +28,7 @@
 
 class Order < ActiveRecord::Base
   ORDERTYPES = ("A".."I").to_a
-  PRINTTYPES = ("1".."5").to_a
+  PRINTTYPES = ("A".."E").to_a
 #  validates :order_type, :presence => true, :inclusion => { :in => ORDERTYPES }
 #  validates :print, :presence => true, :inclusion => { :in => PRINTTYPES }
 #  validates :quantity, :presence => true, :numericality => {:greater_than => 0, :only_integer => true}

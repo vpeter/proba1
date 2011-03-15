@@ -137,6 +137,9 @@ a.help:hover{
     width: 904px;
     min-height: 840px;
     background-color: #212629;
+/*    padding: 28px;*/
+}
+#content, #nav-footer {
     padding: 28px;
 }
 h3 {
@@ -293,22 +296,30 @@ tajekoztatas h3{
     background: #78000a;
 }
 #nav-footer {
-    padding: 20px 0; height: 70px;
+    position: relative;
+    padding-top: 20px; padding-bottom: 20px; height: 70px;
     border-top: #677 dotted 2px;
-    background: #172023;
+    background: #181c20;
 }
-#nav-footer ul li {
-    float: left; padding: 10px 6px; list-style-type: none;
+#nav-footer ul {
+    margin-top: 27px; padding: 0; text-align: left;
+}
+#nav-footer li {
+    display: inline; padding: 10px 5px; list-style-type: none;
+}
+#nav-footer li a {
+    font-size: 12px; text-decoration: none;
+    color: #ff8b05; text-transform: capitalize;
+}
+#nav-footer li.separator {
+    font-size: 12px;
     color: #677;
 }
-#nav-footer ul li a {
-    font-size: smaller; text-decoration: none;
-    color: #ff8b05;
-/*    color: dimgray;*/
-}
 #logo_footer {
+    position: absolute;
+    bottom: 15px; right: 28px;
 /*    vertical-align: middle;*/
-    float: right; width: 100px; height: 70px; margin: 0 20px;
+/*    float: right;*/
 /*    border: solid #374043 1px;*/
 }
 

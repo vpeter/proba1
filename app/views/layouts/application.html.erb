@@ -60,26 +60,26 @@
         <%= yield %>
         <%#*</div>%>
       </div>
-        <div id="nav-footer">
-        <%  @menu_items[0] = {:link_text => "Kezdőlap", :contr => "pages",  :action => "home", :z => "z6"}%>
-          <ul>
-            <% menu_number = 0 %>
-            <% @menu_items.each do |x| %>
-              <% if menu_number > 0 %>
-                <li>
-                  |
-                </li>
-              <% end %>
-              <li>
-                <%= link_to x[:link_text], {:controller => x[:contr], :action => x[:action]}, :class => "#{x[:z]}" %>
+      <%  @menu_items[0] = {:link_text => "Kezdőlap", :contr => "pages",  :action => "home", :z => "z6"}%>
+      <div id="nav-footer">
+        <ul>
+          <% menu_number = 0 %>
+          <% @menu_items.each do |x| %>
+            <% if menu_number > 0 %>
+              <li class ="separator">
+                |
               </li>
-              <% menu_number += 1 %>
             <% end %>
-          </ul>
-          <div id="logo_footer">
-            <%=image_tag "Nevjegykartya_logo_sarga.png", :height => '60' %>
-          </div>
-        </div><!-- nav div vége  -->
+            <li>
+              <%= link_to x[:link_text], {:controller => x[:contr], :action => x[:action]}, :class => "#{x[:z]}" %>
+            </li>
+            <% menu_number += 1 %>
+          <% end %>
+        </ul>
+        <div id="logo_footer">
+          <%=image_tag "Nevjegykartya_logo_sarga.png", :height => '60' %>
+        </div>
+      </div><!-- nav div vége  -->
     </div>
   </body>
 </html>
