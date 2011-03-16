@@ -4,16 +4,19 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <style type="text/css">
       table.mail {text-align: left; color: #332;}
-      .mail td {padding: 6px; background: #c6d880;}
-      .mail td.definition {font-weight: bolder;}
+      .mail td {padding: 6px; background: white;}
+      .mail td.definition {font-weight: bolder; background-color: #fff0db}
     </style>
   </head>
-  <body style ="background-color: #6299c5">
-    <h3>Névjegykártya megrendelés visszaigazolása a Perfect Lines Digitális nyomdától</h3>
+  <body>
+  <div style ="background-color: wheat; font-family: verdana; padding: 25px">
+    <h3>Névjegykártya megrendelés visszaigazolása<br/>
+      a Perfect Lines Digitális Nyomdától</h3>
     <h4>Tisztelt <%= @order.contact_name %>!</h4>
-    Köszönjük megrendelését, amelyet rendszerünkben rögzítettünk!<br/>
-    Szükség esetén - például adatpontosítás céljából - munkatársunk
-    az Ön által megadott elérhetőségén fogja keresni Önt.
+    <p>Köszönjük, hogy leadta megrendelését a www.nevjegykartya.perfectlines.hu oldalunkon!
+    Ezt rendszerünkben rögzítettünk!</p>
+    <p>Szükség esetén (például pontosítás céljából) munkatársunk
+    az Ön által megadott elérhetőségén fogja keresni Önt.</p>
     <h4>A megrendelés adatai:</h4>
     <table class ="mail">
       <tr>
@@ -29,7 +32,7 @@
           Nyomtatás módja:
         </td>
         <td class ="value">
-          <%= t("simple_form.values.order.print.#{@order.print}") %><br/>
+          <%= t("simple_form.values.order.print.#{@order.print}") %>
         </td>
       </tr>
       <tr>
@@ -37,7 +40,19 @@
           Darabszám:
         </td>
         <td class ="value">
-          <%= @order.quantity %><br/>
+          <%= @order.quantity %>
+        </td>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Sarokkerekítéssel:
+        </td>
+        <td class ="value">
+          <% if @order.corner %>
+            kérem a sarokkerekítést
+          <% else %>
+            nem kérek sarokkerekítést
+          <% end %>
         </td>
       </tr>
       <tr>
@@ -53,11 +68,13 @@
         </td>
       </tr>
       <tr>
+      </tr>
+      <tr>
         <td class ="definition">
           Kapcsolattartó neve:
         </td>
         <td class ="value">
-          <%= @order.contact_name %><br/>
+          <%= @order.contact_name %>
         </td>
       </tr>
       <tr>
@@ -65,7 +82,7 @@
           Kapcsolattartó telefonszáma:
         </td>
         <td class ="value">
-          <%= @order.contact_phone %><br/>
+          <%= @order.contact_phone %>
         </td>
       </tr>
       <tr>
@@ -73,13 +90,85 @@
           Kapcsolattartó email címe:
         </td>
         <td class ="value">
-          <%= @order.contact_mail %><br/><br/>
+          <%= @order.contact_mail %>
+        </td>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Kapcsolattartó egyéb adatai:
+        </td>
+        <td class ="value">
+          <%= @order.contact_note %>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Számlázási név:
+        </td>
+        <td class ="value">
+          <%= @order.billing_name %>
+        </td>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Számlázási cím:
+        </td>
+        <td class ="value">
+          <%= @order.billing_address %>
+        </td>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Szállítási információk:
+        </td>
+        <td class ="value">
+          <%= @order.delivery_note %>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Átvétel módja:
+        </td>
+        <td class ="value">
+          <% if @order.takeover == "a" %>
+            Személyes átvétellel, 48 órán belül
+          <% elsif @order.takeover == "b" %>
+            Kiszállítással 5 nap alatt (Budapestre ingyenes, vidékre 2.000 Ft)
+          <% else %>
+            Kiszállítással 48 óra alatt (csak Budapesten - 2.000 Ft)
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Fizetés módja:
+        </td>
+        <td class ="value">
+          <% if @order.payment == "a" %>
+            Előzetes átutalással
+          <% else %>
+            Átvételkor készpénzzel (15.000 Ft alatti megrendelés esetén választható)
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class ="definition">
+          Megrendeléssel kapcsolatos megjegyzések:
+        </td>
+        <td class ="value">
+          <%= @order.order_note %>
         </td>
       </tr>
     </table>
+    <br />
     Ezt a levelet a rendszer automatikusan küldi minden Megrendelőnknek.
     Amennyiben a megrendeléssel vagy a rendszer működésével kapcsolatos kérdése van,
-    válaszlevélben külde el nekünk, vagy keressen minket a 215-7719-es telefonszámon!
-    <h4>Üdvözlettel: A Perfect Lines Digitális nyomda csapata</h4>
+    válaszlevélben küldje el nekünk, vagy keressen minket a 215-7719-es telefonszámon!
+    <h4>Üdvözlettel: A Perfect Lines Digitális Nyomda csapata</h4>
+  </div>
   </body>
 </html>
