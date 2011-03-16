@@ -5,7 +5,7 @@
     <style type="text/css">
       table.mail {text-align: left; color: #332;}
       .mail td {padding: 6px; background: white;}
-      .mail td.definition {font-weight: bolder; background-color: #fff0db}
+      .mail td.definition {font-weight: bolder; background-color: #fff0db;}
     </style>
   </head>
   <body>
@@ -14,40 +14,40 @@
       a Perfect Lines Digitális Nyomdától</h3>
     <h4>Tisztelt <%= @order.contact_name %>!</h4>
     <p>Köszönjük, hogy leadta megrendelését a www.nevjegykartya.perfectlines.hu oldalunkon!
-    Ezt rendszerünkben rögzítettünk!</p>
+    Ezt rendszerünkben rögzítettük!</p>
     <p>Szükség esetén (például pontosítás céljából) munkatársunk
     az Ön által megadott elérhetőségén fogja keresni Önt.</p>
     <h4>A megrendelés adatai:</h4>
     <table class ="mail">
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Névjegykártya típusa (papír és felület):
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= t("simple_form.values.order.order_type.#{@order.order_type}") %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Nyomtatás módja:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= t("simple_form.values.order.print.#{@order.print}") %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Darabszám:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.quantity %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Sarokkerekítéssel:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <% if @order.corner %>
             kérem a sarokkerekítést
           <% else %>
@@ -56,10 +56,10 @@
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Nyomtatásra kész:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <% if @order.print_ready %>
             igen, teljesen kész anyagot küldtem
           <% else %>
@@ -70,70 +70,70 @@
       <tr>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Kapcsolattartó neve:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.contact_name %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Kapcsolattartó telefonszáma:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.contact_phone %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Kapcsolattartó email címe:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.contact_mail %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Kapcsolattartó egyéb adatai:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.contact_note %>
         </td>
       </tr>
       <tr>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Számlázási név:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.billing_name %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Számlázási cím:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.billing_address %>
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Szállítási információk:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.delivery_note %>
         </td>
       </tr>
       <tr>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Átvétel módja:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <% if @order.takeover == "a" %>
             Személyes átvétellel, 48 órán belül
           <% elsif @order.takeover == "b" %>
@@ -144,10 +144,10 @@
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Fizetés módja:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <% if @order.payment == "a" %>
             Előzetes átutalással
           <% else %>
@@ -156,18 +156,19 @@
         </td>
       </tr>
       <tr>
-        <td class ="definition">
+        <td style = "padding: 6px; font-weight: bolder; background-color: #fff0db;">
           Megrendeléssel kapcsolatos megjegyzések:
         </td>
-        <td class ="value">
+        <td style = "padding: 6px;  background-color: white;">
           <%= @order.order_note %>
         </td>
       </tr>
     </table>
     <br />
-    Ezt a levelet a rendszer automatikusan küldi minden Megrendelőnknek.
-    Amennyiben a megrendeléssel vagy a rendszer működésével kapcsolatos kérdése van,
-    válaszlevélben küldje el nekünk, vagy keressen minket a 215-7719-es telefonszámon!
+    Ezt a levelet a rendszerünk automatikusan küldi minden Megrendelőnknek.
+    Amennyiben a megrendeléssel vagy a rendszer működésével kapcsolatos kérdése
+    vagy észrevétele van, válaszlevélben küldje el nekünk, vagy keressen minket
+    a 215-7719-es telefonszámon!
     <h4>Üdvözlettel: A Perfect Lines Digitális Nyomda csapata</h4>
   </div>
   </body>
