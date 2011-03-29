@@ -1,54 +1,15 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-#-------------------------------------------------------------------------------------------
-
-#Ez a saját fordításom
-
 "hu":
-  home:
-    title: "minőségi névjegykártya rendelés"
-  order:
-    title_new_order: "áraink - megrendelés"
-    title_orders: "az összes megrendelés"
-    title_order: "a megrendelés adatai"
-    title_edit: "megrendelés szerkesztése"
-
-    show: "megmutat"
-    view_all: "összeset mutat"
-    edit: "szerkeszt"
-    destroy: "törlés"
-
-    new_order: "új megrendelés felvétele"
-    back_to_list: "vissza a listához"
-
-    name: "név"
-    price: "ár"
-
-    order_type: "Papír és felület"
-    print: "Nyomtatás módja"
-    quantity: "Mennyiség"
-    corner: "Sarokkerekítéssel"
-    print_ready: "Nyomtatásra előkészített fájlt adok"
-    file: ""
-    contact_name: "Név"
-    contact_phone: "Telefonszáma"
-    contact_mail: "E-mail"
-    contact_note: "További adatok"
-    billing_name: "Név"
-    billing_address: "Cím"
-    delivery_note: "Adatok, információk"
-    takeover: "Átvétel módja"
-    payment: "Fizetés módja"
-    order_note: "Egyéb információk"
-  order_description:
-    title: "a megrendelés menete"
-  contact:
-    title: "elérhetőségeink"
-  policy:
-    title: "teljesítési feltételeink"
-  faq:
-    title: "Gyakran ismételt kérdések és azok válaszai"
   simple_form:
+    "yes": 'igen'
+    "no": 'Nem'
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Hibás kitöltés, kérem nézze át és javítsa ki!"
     labels:
       order:
         order_type: "Papír és felület"

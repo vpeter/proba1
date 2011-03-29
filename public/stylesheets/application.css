@@ -81,6 +81,9 @@ a {
 .error_messages ul {
   margin: 0;
 }
+p.error_notification {
+    font-size: 24px; letter-spacing: 2px; color: lightcoral;
+}
 
 /*---------------------------------------*/
 /*----------- saját rész ----------------*/
@@ -171,7 +174,7 @@ h3 {
     height: 100px;
     margin-left: -100px;
     margin-bottom: -30px;
-    background-color: #821217;
+/*    background-color: #821217;*/
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
@@ -179,9 +182,39 @@ h3 {
     -moz-box-shadow: 5px 5px 5px black; /* Firefox */
     -webkit-box-shadow: 5px 5px 5px black; /* Safari and Chrome */
     box-shadow: 5px 5px 5px black;
+
+/*    -moz-border-radius: 4px 4px 4px 4px;*/
+/*    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);*/
+    background: -moz-linear-gradient(center top , #e24247, #600000) repeat scroll 0 0 transparent;
+/*    background: -moz-linear-gradient(center top , #50B7D1, #286DA3) repeat scroll 0 0 transparent;*/
+    border: 1px solid #701010;
+/*    border: 1px solid #51A0B3;*/
+/*    color: #BED7E1;*/
+/*    display: inline-block;*/
+/*    font-size: 12px;*/
+/*    padding: 15px 30px;*/
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
+    /*background: -webkit-gradient(linear,0% 0,0% 100%,from(#e24247),to(#600000));*/
+    background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#e24247), to(#600000));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#e24247',endColorstr='#600000');
+    /*background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;*/
+
 }
 .big-button:hover {
-    background-color: #f23;
+/*    background-color: #f23;*/
+    background: -moz-linear-gradient(center top , #ff5257, #900000) repeat scroll 0 0 transparent;
+    background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#ff5257), to(#900000));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ff5257',endColorstr='#900000');
+    border: 1px solid #a01010;
+    border: 1px solid #a01010;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
 }
 .big-button a{
     text-align: center;
@@ -329,31 +362,52 @@ tajekoztatas h3{
 /*---------------------------------------*/
 
 table {
-    text-align: center;
+    width: 100%;
+    letter-spacing: -0.06em; font-size: 13px;
     color: #221;
 }
-thead th {
+tr {
+    height: 20px;
+}
+tr.valto {
+    opacity: 0.8;
+}
+thead {
+
+}
+thead, th {
     margin-bottom: 5px;
-    background: #fc3;
-    font-weight: bolder;
+    text-align: left;
+/*    font-weight: normal;*/
+    background: #dfbc90;
+}
+th.darabszam {
+    text-align: center;
+}
+th.tipus {
+    text-align: center;
+    font-weight: bold;
+}
+th#alaptipus {
+    width: 100px; text-align: center;
 }
 td {
-    background: #d7aa20;
+    background: wheat;
+    text-align: center;
 }
 tr:hover {
     opacity: 0.9;
 }
-td:hover {
-/*    opacity: 0.3;*/
+/*td:hover {
     background: wheat;
     font-weight: bolder; font-size: larger;
     cursor: pointer;
-}
+}*/
 th, td {
-    padding: 3px 1px;
+    padding: 2px 4px;
 }
 th {
-    background: #daaa1a;
+    background: #dab680;
 }
 
 /*---------------------------------------*/

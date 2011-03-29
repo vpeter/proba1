@@ -10,87 +10,82 @@
   <table>
     <thead>
       <tr>
+        <th>Típus</th>
         <th>Anyag és felület</th>
         <th>Nyomtatás</th>
-        <th>100 db</th>
-        <th>200 db</th>
-        <th>300 db</th>
-        <th>500 db</th>
-        <th>1000 db</th>
+        <th class ="darabszam">100 db</th>
+        <th class ="darabszam">200 db</th>
+        <th class ="darabszam">300 db</th>
+        <th class ="darabszam">500 db</th>
+        <th class ="darabszam">1000 db</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>„A“ 300 g-os matt műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+        <th rowspan ="5" class ="tipus">A</th>
+        <th rowspan ="5" id ="alaptipus"><%= t("simple_form.values.order.order_type.A") %></th>
+        <th><%= t("simple_form.values.order.print.A") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
+      </tr>
+      <tr class ="valto">
+        <th><%= t("simple_form.values.order.print.B") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
       </tr>
       <tr>
-        <th>„B“ 300 g-os fényes műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+        <th><%= t("simple_form.values.order.print.C") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
+      </tr>
+      <tr class ="valto">
+        <th><%= t("simple_form.values.order.print.D") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
       </tr>
       <tr>
-        <th>„B“ 300 g-os fényes műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+        <th><%= t("simple_form.values.order.print.E") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
+      </tr>
+      <%#*-------------  Extra árak  ----------------%>
+      <tr>
+        <th colspan ="8"><%= t("simple_form.values.order.extra") %></th>
       </tr>
       <tr>
-        <th>„B“ 300 g-os fényes műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+        <th class ="tipus">B</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.B") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
+      </tr>
+      <tr class ="valto">
+        <th class ="tipus">C</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.C") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
       </tr>
       <tr>
-        <th>„B“ 300 g-os fényes műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+        <th class ="tipus">D</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.D") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
+      </tr>
+      <tr class ="valto">
+        <th class ="tipus">E</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.E") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
       </tr>
       <tr>
-        <th>„B“ 300 g-os fényes műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+        <th class ="tipus">F</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.F") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
+      </tr>
+      <tr class ="valto">
+        <th class ="tipus">G</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.G") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
       </tr>
       <tr>
-        <th>„B“ 300 g-os fényes műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+        <th class ="tipus">H</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.H") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
       </tr>
-      <tr>
-        <th>„B“ 300 g-os fényes műnyomó papíron</th>
-        <th>1+0 - egy oldalas fekete nyomással</th>
-        <td>20</td>
-        <td>18</td>
-        <td>16</td>
-        <td>14</td>
-        <td>12</td>
+      <tr class ="valto">
+        <th class ="tipus">I</th>
+        <th colspan ="2"><%= t("simple_form.values.order.order_type.I") %></th>
+        <td>20</td> <td>18</td> <td>16</td> <td>14</td> <td>12</td>
       </tr>
     </tbody>
   </table>
