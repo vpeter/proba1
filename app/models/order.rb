@@ -27,6 +27,7 @@
   require 'sha1'
 
 class Order < ActiveRecord::Base
+  has_attached_file :printready, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   ORDERTYPES = ("A".."I").to_a
   PRINTTYPES = ("A".."E").to_a
   validates :order_type, :presence => true, :inclusion => { :in => ORDERTYPES }

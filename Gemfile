@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.1'
 gem "simple_form"
+gem "paperclip", "~> 2.3"
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'

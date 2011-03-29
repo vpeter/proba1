@@ -1,4 +1,5 @@
-<%= simple_form_for(@order) do |f| %>
+<%= simple_form_for(@order), :url => order_path, :html => { :multipart => true  |f| %>
+<%#= simple_form_for(@order) do |f| %>
   <%= f.error_notification %>
   <%= render 'arak' %>
         <%# SimpleForm.wrapper_tag = :div %>
@@ -26,7 +27,8 @@
     <fieldset class ="fildset-3">
       <%= content_tag(:legend, "3. Fájl feltöltése" ) %>
       <div class="kerdojel"> ? <%= content_tag(:span, "Útmutató a Fájl feltöltése témakörhöz" ) %></div>
-        <%= f.input :contact_name, :label => "Fájl" %>
+        <%= f.file_fild :printready %>
+        <%#= f.input :contact_name, :label => "Fájl" %>
     </fieldset>
     <fieldset class ="fildset-4">
       <%= content_tag(:legend, "4. Megrendelő adatai" ) %>
